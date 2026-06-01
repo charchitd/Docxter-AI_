@@ -71,10 +71,11 @@ Docxter AI is custom-engineered to solve these challenges for Indian wholesalers
 ## 🚀 Key Premium Features
 
 ### 1. 📊 DCLI (Core Ledger Intelligence)
-Our autonomous vCFO synthesizer engine scans historic business transactions to detect cost gaps:
+Our autonomous vCFO synthesizer engine scans historic business transactions to detect cost gaps and unlock predictive growth:
 * **Vendor Rate Benchmarks:** Flags when current quotes exceed past purchase benchmarks.
 * **GST/VAT Reconciliation:** Cross-references invoices with tax statements to claim 100% of unclaimed credits.
 * **Deadwood Inventory Detector:** Identifies slow-moving capital locked in warehouses.
+* **Predictive Sales & Market Analytics:** Analyzes Tally historical order trends to forecast seasonal demand cycles (e.g. flagging a 15% high-margin demand spike weeks in advance) and detects client accounts at risk of churning.
 
 ### 2. ⚡ Hybrid Online/Offline State Toggle
 Effortlessly switch between lightning-fast cloud Gemini models (utilizing free tier rules) and 100% private local Gemma 4 with a single toggle in the workspace.
