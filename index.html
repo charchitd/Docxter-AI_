@@ -764,8 +764,8 @@
         <h3 class="text-lg font-bold text-white font-heading flex items-center gap-2">
           <i data-lucide="sparkles" class="w-5 h-5 text-amber-400"></i> Secure DCLI Demo Invite
         </h3>
-        <button onclick="closeLeadsModal()" class="text-brand-textGray hover:text-white transition-colors">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <button type="button" onclick="closeLeadsModal()" class="text-brand-textGray hover:text-white transition-colors focus:outline-none" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5" style="pointer-events: none;"></i>
         </button>
       </div>
 
@@ -1240,6 +1240,24 @@
         container.scrollTop = container.scrollHeight;
       }, 700);
     }
+
+    // Close modal on click outside (backdrop)
+    document.getElementById("leads-modal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeLeadsModal();
+      }
+    });
+
+    // Close modal & chat on Esc keypress
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeLeadsModal();
+        const win = document.getElementById("chat-window");
+        if (win && !win.classList.contains("hidden")) {
+          win.classList.add("hidden");
+        }
+      }
+    });
   </script>
 </body>
 </html>
