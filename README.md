@@ -28,11 +28,24 @@
 
 </div>
 
-## 🌐 Live Interactive Portfolio Landing Page
+## ⚡ The Hook: Your 24/7 Autonomous Local vCFO
 
-We have published an interactive HTML5 product landing page and vCFO audit sandbox for Docxter AI. Here, clients and investors can interactively switch market pricing (INR 🇮🇳 vs GBP 🇬🇧) and simulate audits on Tally sheets:
+Most small businesses in India and the UK lose between **3% to 5% of their monthly cash flow** to invisible vendor overcharges, double-payments, deadwood stock, and unclaimed Input Tax Credits (GST/VAT). 
 
-👉 **[Launch Docxter Live Showcase & Sandbox Demo](https://charchitd.github.io/Docxter-AI_/)**
+**Docxter AI** acts as your autonomous, 100% private virtual CFO that runs locally in your office, scanning your historical ledgers to recover this lost revenue. Best of all: **We only get paid when you save money.**
+
+👉 **[Try the Live Interactive Sandbox Demo & Localized Audit Simulator Now!](https://charchitd.github.io/Docxter-AI_/)**
+
+---
+
+## 🎯 The Four Unfair Advantages (Docxter USPs)
+
+| USP | What It Is | Why It Beats the Competition |
+|:---|:---|:---|
+| 🔒 **100% Local Privacy** | Runs entirely on your local computer using **Google Gemma 4** (via Ollama) and pgvector. | Sensitive balance sheets, tax reports, and client directories **never** touch a third-party cloud server. |
+| 📊 **Autonomous DCLI Engine** | Core Ledger Intelligence automatically tracks rate deviations, late payers, and warehouse bottlenecks. | Moves you from passive document reading to **proactive cash flow generation** with no manual entry. |
+| 🇮🇳 🇬🇧 **GST & VAT Localization** | Dual-regional audit rules specifically designed to detect unclaimed GSTR-2B (India) and VAT double-charges (UK). | Fully tailored to regional tax codes, replacing expensive corporate audit consultants. |
+| 💰 **Performance-Based Pricing** | Base tier at ₹999 (IN) / £49 (UK) per month plus a **3.5% commission on verified savings**. | We align our cash flow directly with yours. If Docxter detects ₹0 in savings, you pay ₹0 in commission. |
 
 ---
 
