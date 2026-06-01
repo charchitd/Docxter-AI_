@@ -291,33 +291,197 @@
         <p class="text-brand-textGray mt-3 text-lg font-heading">Follow three simple steps to start analyzing, optimizing, and auditing your business files.</p>
       </div>
 
-      <!-- Three Steps Layout -->
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">1</div>
+      <!-- Three Steps Interactive Navigation Tabs -->
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <button onclick="setHowToUseStep(1)" id="step-tab-1" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-amber-500/10 border-2 border-amber-500 rounded-2xl transition-all hover:scale-[1.02]">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500 border border-amber-500 flex items-center justify-center font-bold text-white font-heading shadow-md shadow-amber-950">1</div>
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
             <i data-lucide="upload-cloud" class="w-5 h-5 text-amber-400"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2 font-heading">Upload Raw Files</h3>
           <p class="text-xs text-brand-textGray leading-relaxed">Drag & drop Tally sales logs, GSTR/VAT tax spreadsheets, supplier rate agreements, or raw inventory datasets.</p>
-        </div>
+        </button>
 
-        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">2</div>
+        <button onclick="setHowToUseStep(2)" id="step-tab-2" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">2</div>
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
             <i data-lucide="toggle-left" class="w-5 h-5 text-amber-400"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2 font-heading">Toggle Ingest Mode</h3>
           <p class="text-xs text-brand-textGray leading-relaxed">Switch to Cloud (Gemini) for high-speed metadata audits, or Local (Gemma 4) for 100% offline air-gapped private ledger indexing.</p>
-        </div>
+        </button>
 
-        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">3</div>
+        <button onclick="setHowToUseStep(3)" id="step-tab-3" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">3</div>
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
             <i data-lucide="message-square" class="w-5 h-5 text-amber-400"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-2 font-heading">Query & Decide</h3>
           <p class="text-xs text-brand-textGray leading-relaxed">Ask business-grade queries directly to your workspace. Get instant interactive charts, inventory metrics, and customized predictions.</p>
+        </button>
+      </div>
+
+      <!-- Live Simulator Preview Window -->
+      <div class="rounded-2xl border border-brand-border bg-[#09090E] overflow-hidden shadow-2xl mb-12">
+        <div class="px-5 py-3 border-b border-brand-border bg-brand-card/80 flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-textGray/40"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-textGray/40"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-textGray/40"></span>
+            <span class="text-[10px] text-brand-textGray font-mono ml-2 uppercase tracking-wider font-bold">Docxter Workspace App Live Simulator</span>
+          </div>
+          <div id="sim-step-status" class="text-[10px] text-amber-400 font-bold px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">
+            Step 1 of 3: Raw File Ingestion
+          </div>
+        </div>
+
+        <div class="p-6 md:p-8 min-h-[300px] flex flex-col justify-center" id="how-to-use-workspace-screen">
+          <!-- Step 1 Upload Content (Default) -->
+          <div id="htu-content-1" class="space-y-6">
+            <div class="border-2 border-dashed border-brand-border hover:border-amber-500/40 rounded-xl p-8 text-center bg-brand-card/10 cursor-pointer transition-all flex flex-col items-center">
+              <i data-lucide="upload-cloud" class="w-10 h-10 text-brand-textGray/50 mb-3 animate-pulse"></i>
+              <span class="text-xs font-bold text-white mb-1">Drag and Drop Tally Ledgers or Tax Sheets Here</span>
+              <span class="text-[10px] text-brand-textGray">Supports PDF, XLSX, CSV, Tally XML (Max 50MB)</span>
+            </div>
+            
+            <div class="space-y-2">
+              <div class="p-3 bg-brand-card border border-brand-border rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">tally_ledger_2026.csv</h4>
+                    <p class="text-[9px] text-brand-textGray">12.4 MB · Ingestion Completed</p>
+                  </div>
+                </div>
+                <span class="text-[9px] bg-green-500/20 text-green-400 font-bold border border-green-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <i data-lucide="check" class="w-2.5 h-2.5"></i> Loaded
+                </span>
+              </div>
+
+              <div class="p-3 bg-brand-card border border-brand-border rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="file-text" class="w-5 h-5 text-amber-500"></i>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">gstr_2b_reconcile.xlsx</h4>
+                    <p class="text-[9px] text-brand-textGray">4.8 MB · Ingestion Completed</p>
+                  </div>
+                </div>
+                <span class="text-[9px] bg-green-500/20 text-green-400 font-bold border border-green-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <i data-lucide="check" class="w-2.5 h-2.5"></i> Loaded
+                </span>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <button onclick="setHowToUseStep(2)" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+                Next: Configure Ingest Mode (Step 2) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 Switcher Content (Hidden by default) -->
+          <div id="htu-content-2" class="hidden space-y-6">
+            <div class="text-center max-w-md mx-auto mb-4">
+              <i data-lucide="shield-check" class="w-10 h-10 text-amber-500 mx-auto mb-3"></i>
+              <h3 class="text-sm font-bold text-white">Configure Hybrid Security Routing</h3>
+              <p class="text-xs text-brand-textGray mt-1">Select whether files are processed via secure cloud endpoints or entirely offline on your local device.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <!-- Online option -->
+              <button onclick="setSimulatorSecurityMode('online')" id="htu-sec-online" class="p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i>
+                    <span class="text-xs font-bold text-white">Cloud Gemini Mode</span>
+                  </div>
+                  <p class="text-[10px] text-brand-textGray leading-relaxed">Routes document queries through secure cloud LLM APIs. Extremely fast metadata synthesis and zero local processor impact.</p>
+                </div>
+                <div id="htu-online-indicator" class="text-[10px] text-brand-textGray font-semibold flex items-center gap-1 mt-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-textGray"></span> Inactive
+                </div>
+              </button>
+
+              <!-- Offline option -->
+              <button onclick="setSimulatorSecurityMode('offline')" id="htu-sec-offline" class="p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
+                <div class="absolute top-3 right-3 text-amber-400">
+                  <i data-lucide="shield-alert" class="w-4 h-4 animate-pulse"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="shield" class="w-4 h-4 text-green-400"></i>
+                    <span class="text-xs font-bold text-white">Local Gemma 4 (Air-Gapped)</span>
+                  </div>
+                  <p class="text-[10px] text-brand-textGray leading-relaxed">Processes sensitive ledger balance sheets 100% offline. Files never leave your local workspace computer network.</p>
+                </div>
+                <div id="htu-offline-indicator" class="text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Active Local Indexer
+                </div>
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center pt-2">
+              <button onclick="setHowToUseStep(1)" class="text-xs text-brand-textGray hover:text-white transition-colors flex items-center gap-1">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Step 1
+              </button>
+              <button onclick="setHowToUseStep(3)" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+                Next: Prompt & Ask (Step 3) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 Query Console Content (Hidden by default) -->
+          <div id="htu-content-3" class="hidden space-y-6">
+            <div class="text-center max-w-md mx-auto mb-2">
+              <h3 class="text-sm font-bold text-white">Interactive Workspace Chat Preview</h3>
+              <p class="text-xs text-brand-textGray mt-1">Select a quick action query below to simulate a real-time vCFO ledger intelligence response.</p>
+            </div>
+
+            <!-- Workspace Chat window mock -->
+            <div class="border border-brand-border/60 bg-brand-card/50 rounded-xl p-4 min-h-[160px] flex flex-col justify-between">
+              <div id="htu-chat-box" class="space-y-3 flex-1 flex flex-col justify-center">
+                <!-- Awaiting input placeholder -->
+                <div id="htu-chat-empty" class="text-center py-6">
+                  <i data-lucide="message-square" class="w-8 h-8 text-brand-textGray/20 mx-auto mb-2"></i>
+                  <span class="text-xs text-brand-textGray">Click one of the Quick Queries below to test.</span>
+                </div>
+
+                <!-- Query/Response render area -->
+                <div id="htu-chat-render" class="hidden space-y-3 text-xs leading-relaxed">
+                  <div class="flex flex-col items-end">
+                    <span class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-white font-medium" id="htu-chat-user-msg">"Which vendors overcharged?"</span>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <div class="p-3 bg-brand-card border border-brand-border rounded-xl text-brand-textGray whitespace-pre-line" id="htu-chat-bot-msg">
+                      Analyzing...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Clickable Queries -->
+              <div class="flex flex-wrap gap-2 pt-3 border-t border-brand-border/60 mt-3 justify-center">
+                <button onclick="runHtuChatMock('benchmark')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                  🔍 Rate Benchmark Mismatch
+                </button>
+                <button onclick="runHtuChatMock('tax')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                  🧾 GSTR-2B Claim List
+                </button>
+                <button onclick="runHtuChatMock('sales')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                  📈 Seasonal Product Spikes
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-2">
+              <button onclick="setHowToUseStep(2)" class="text-xs text-brand-textGray hover:text-white transition-colors flex items-center gap-1">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Step 2
+              </button>
+              <button onclick="triggerCustomLeadModal()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+                Join Premium DCLI Workspace <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -660,6 +824,96 @@
   <script>
     lucide.createIcons();
     
+    // How to Use Workspace Simulator Logic
+    let activeHtuStep = 1;
+    let activeHtuSecurityMode = "offline";
+    
+    function setHowToUseStep(step) {
+      activeHtuStep = step;
+      
+      // Update step status text
+      const statusText = document.getElementById("sim-step-status");
+      if(step === 1) statusText.innerText = "Step 1 of 3: Raw File Ingestion";
+      else if(step === 2) statusText.innerText = "Step 2 of 3: Hybrid Security Mode";
+      else statusText.innerText = "Step 3 of 3: Workspace Chat Console";
+      
+      // Update tab button styles
+      for(let i = 1; i <= 3; i++) {
+        const btn = document.getElementById("step-tab-" + i);
+        const indicator = btn.querySelector(".absolute");
+        if(i === step) {
+          btn.className = "w-full text-left relative flex flex-col items-center text-center p-6 bg-amber-500/10 border-2 border-amber-500 rounded-2xl transition-all hover:scale-[1.02]";
+          indicator.className = "absolute -top-5 w-10 h-10 rounded-full bg-amber-500 border border-amber-500 flex items-center justify-center font-bold text-white font-heading shadow-md shadow-amber-950";
+        } else {
+          btn.className = "w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border";
+          indicator.className = "absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading";
+        }
+        
+        // Toggle view containers
+        const view = document.getElementById("htu-content-" + i);
+        if(i === step) view.classList.remove("hidden");
+        else view.classList.add("hidden");
+      }
+      lucide.createIcons();
+    }
+    
+    function setSimulatorSecurityMode(mode) {
+      activeHtuSecurityMode = mode;
+      const onlineCard = document.getElementById("htu-sec-online");
+      const offlineCard = document.getElementById("htu-sec-offline");
+      const onlineInd = document.getElementById("htu-online-indicator");
+      const offlineInd = document.getElementById("htu-offline-indicator");
+      
+      if(mode === 'online') {
+        onlineCard.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        offlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        
+        onlineInd.className = "text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3";
+        onlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping"></span> Active Cloud Router';
+        
+        offlineInd.className = "text-[10px] text-brand-textGray font-semibold flex items-center gap-1 mt-3";
+        offlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-brand-textGray"></span> Inactive';
+      } else {
+        offlineCard.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        onlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        
+        offlineInd.className = "text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3";
+        offlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Active Local Indexer';
+        
+        onlineInd.className = "text-[10px] text-brand-textGray font-semibold flex items-center gap-1 mt-3";
+        onlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-brand-textGray"></span> Inactive';
+      }
+      lucide.createIcons();
+    }
+    
+    function runHtuChatMock(queryType) {
+      const emptyState = document.getElementById("htu-chat-empty");
+      const renderState = document.getElementById("htu-chat-render");
+      const userMsg = document.getElementById("htu-chat-user-msg");
+      const botMsg = document.getElementById("htu-chat-bot-msg");
+      
+      emptyState.classList.add("hidden");
+      renderState.classList.remove("hidden");
+      botMsg.innerText = "Analyzing RAG index chunks locally...";
+      
+      if(queryType === 'benchmark') {
+        userMsg.innerText = '"Which vendors overcharged us?"';
+        setTimeout(() => {
+          botMsg.innerHTML = "📊 **Benchmark Cost Savings:**\\nI matched Tally ledger entries. **Patel Steel** overcharged you by **₹15/kg** on structural steel, causing **₹63,000** in leaks. Ready to draft recovery letter.";
+        }, 800);
+      } else if(queryType === 'tax') {
+        userMsg.innerText = '"Calculate unclaimed input credits."';
+        setTimeout(() => {
+          botMsg.innerHTML = "🧾 **Input Credit Claims:**\\nIdentified **₹1,12,000 in unclaimed GSTR-2B credits** from 4 local wholesalers. Auto-draft reminders generated to claim tax capital.";
+        }, 800);
+      } else {
+        userMsg.innerText = '"Predict product demand trends."';
+        setTimeout(() => {
+          botMsg.innerHTML = "📈 **Sales Projections:**\\nSeasonal metrics forecast an **18% seasonal demand surge for HDPE pipes** next month. Recommend order placement at ₹105/kg to protect margins.";
+        }, 800);
+      }
+    }
+
     let activePricingMarket = "IN";
     let activeSandboxMode = "offline";
     
