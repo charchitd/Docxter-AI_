@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docxter AI — Premium Document Intelligence & vCFO Audit Suite</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Secure, privacy-first local document intelligence and autonomous cost-saving audits powered by Google Gemma 4 for Indian MSMEs and UK SMBs.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0A0A0F',
+              card: '#111118',
+              border: '#2A2A35',
+              accent: '#F59E0B',
+              accentHover: '#D97706',
+              textGray: '#8B8B9E',
+              textLight: '#F4F4F8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A0A0F;
+      color: #F4F4F8;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glass {
+      background: rgba(17, 17, 24, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(42, 42, 53, 0.5);
+    }
+    .glow-orange {
+      box-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
+    }
+  </style>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen overflow-x-hidden relative">
+
+  <!-- Background Ambient Glows -->
+  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+  <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[130px] -z-10 pointer-events-none"></div>
+
+  <!-- Header Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-[#2A2A35]/50 bg-[#0A0A0F]/80 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-900/20">
+          <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+        </div>
+        <span class="font-bold text-xl tracking-tight text-white font-heading">Docxter <span class="text-xs bg-amber-500/20 text-amber-400 font-bold px-2 py-0.5 rounded-full border border-amber-500/30 ml-1">vCFO Portfolio</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-[#8B8B9E] font-medium">
+        <a href="#demo" class="hover:text-white transition-colors">Interactive Demo</a>
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing Structure</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </nav>
+      <div>
+        <a href="#demo" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-amber-950/50 hover:scale-105">
+          Try Live Sandbox <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-semibold mb-8">
+        <i data-lucide="sparkles" class="w-3 h-3 animate-pulse"></i>
+        Privacy-First Local AI for Small Businesses
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6 text-white font-heading">
+        Audit Tally & GST Invoices
+        <br />
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">with 100% Offline AI.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-brand-textGray max-w-2xl mx-auto leading-relaxed mb-10">
+        Stop overpaying. Upload Tally ledgers, contracts, or tax reports. Docxter's local vCFO automatically identifies Input Tax Credit gaps, overbilled supplier rates, and deadwood inventory. 
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#demo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-sm px-7 py-4 rounded-xl transition-all shadow-xl shadow-amber-950/50 hover:scale-105">
+          Scan Sample Tally Sheet <i data-lucide="play" class="w-4 h-4"></i>
+        </a>
+        <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-brand-border bg-brand-card/50 hover:border-amber-500/50 text-[#F4F4F8] hover:text-white font-semibold text-sm px-7 py-4 rounded-xl transition-all">
+          Explore Features <i data-lucide="chevron-down" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <p class="text-xs text-brand-textGray/60 mt-6 flex items-center justify-center gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> No Database Uploads Required · Powered by Local Google Gemma 4
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Sandbox Demo Simulator -->
+  <section id="demo" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/20 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading">Interactive vCFO Audit Sandbox</h2>
+        <p class="text-brand-textGray mt-3">Click the button below to simulate how Docxter processes raw business ledgers locally to extract hidden savings.</p>
+      </div>
+
+      <!-- Simulator Board -->
+      <div class="rounded-2xl border border-brand-border bg-[#0D0D14] overflow-hidden shadow-2xl shadow-black/80">
+        <!-- Window Controls -->
+        <div class="flex items-center justify-between px-5 py-3.5 border-b border-brand-border bg-[#14141E]">
+          <div class="flex items-center gap-2">
+            <span class="w-3.5 h-3.5 rounded-full bg-red-500/70"></span>
+            <span class="w-3.5 h-3.5 rounded-full bg-yellow-500/70"></span>
+            <span class="w-3.5 h-3.5 rounded-full bg-green-500/70"></span>
+            <span class="text-xs text-brand-textGray font-mono ml-3 flex items-center gap-1.5 bg-[#0A0A0F] border border-brand-border px-2.5 py-1 rounded-md">
+              <i data-lucide="terminal" class="w-3 h-3 text-amber-500"></i> dcli_synthesizer.bin
+            </span>
+          </div>
+          <div class="text-xs text-amber-500 font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span> 100% Offline Mode (Gemma 4)
+          </div>
+        </div>
+
+        <div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 min-h-[380px]">
+          <!-- Left Controller Panel -->
+          <div class="w-full md:w-1/3 flex flex-col justify-between border-b md:border-b-0 md:border-r border-brand-border/50 pb-6 md:pb-0 md:pr-6">
+            <div>
+              <h3 class="text-lg font-bold text-white font-heading mb-2">Configure Ledger Ingestion</h3>
+              <p class="text-xs text-brand-textGray leading-relaxed mb-4">Select a mock database log to run a simulated vCFO audit directly inside your browser.</p>
+              
+              <div class="space-y-2">
+                <button onclick="startSimulation('Tally')" id="btn-tally" class="w-full text-left p-3 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/50 hover:bg-brand-card/80 transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Tally Sales Ledger.csv</h4>
+                      <p class="text-[10px] text-brand-textGray">150 transactions · FY 25-26</p>
+                    </div>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray"></i>
+                </button>
+
+                <button onclick="startSimulation('GST')" id="btn-gst" class="w-full text-left p-3 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/50 hover:bg-brand-card/80 transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="file-text" class="w-5 h-5 text-amber-500"></i>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">GSTR-2B Mismatches.xlsx</h4>
+                      <p class="text-[10px] text-brand-textGray">84 invoices · Input Tax Claims</p>
+                    </div>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <button onclick="triggerCustomLeadModal()" class="w-full inline-flex items-center justify-center gap-2 border border-dashed border-amber-500/30 hover:border-amber-500/70 text-amber-400 font-bold text-xs p-3 rounded-xl transition-all">
+                <i data-lucide="mail" class="w-4 h-4"></i> Secure Full PDF Demo Audit
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Terminal Output -->
+          <div class="flex-1 flex flex-col justify-center min-h-[250px] relative">
+            
+            <!-- Default Empty State -->
+            <div id="sim-default" class="text-center py-10">
+              <i data-lucide="box" class="w-12 h-12 text-brand-textGray/30 mx-auto mb-4 animate-bounce"></i>
+              <h4 class="text-sm font-bold text-white mb-1">Awaiting Ingestion Pipeline</h4>
+              <p class="text-xs text-brand-textGray max-w-sm mx-auto">Select a sample file on the left to begin compiling your business&apos;s Corporate DNA profile.</p>
+            </div>
+
+            <!-- Loading/Processing Screen -->
+            <div id="sim-loading" class="hidden text-center py-10">
+              <div class="inline-block relative w-12 h-12 mb-4">
+                <div class="absolute inset-0 rounded-full border-4 border-amber-500/10 border-t-amber-500 animate-spin"></div>
+              </div>
+              <h4 class="text-sm font-bold text-white mb-2" id="loading-title">Compiling Corporate DNA...</h4>
+              <p class="text-xs text-brand-textGray max-w-xs mx-auto animate-pulse" id="loading-desc">Extracting Tally transaction markers and comparing supplier rate logs locally...</p>
+            </div>
+
+            <!-- Final Result Audited State -->
+            <div id="sim-result" class="hidden space-y-4">
+              <div class="flex items-center justify-between border-b border-brand-border/60 pb-3">
+                <div>
+                  <h4 class="text-sm font-heading font-bold text-white" id="res-title">DCLI DNA Synthesized</h4>
+                  <p class="text-[10px] text-brand-textGray" id="res-timestamp">Scan run completed in 1.4 seconds</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] bg-green-500/20 text-green-400 font-bold border border-green-500/30 px-2.5 py-1 rounded-full">
+                    Audited Locally
+                  </span>
+                </div>
+              </div>
+
+              <!-- Savings Detections Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="detections-container">
+                <!-- Dynamically Inserted DCLI audit savings events will render here -->
+              </div>
+
+              <!-- Interactive Mock SVG chart -->
+              <div class="border border-brand-border/60 rounded-xl p-4 bg-brand-card/40">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-white">Savings Projection vs Commissions</span>
+                  <span class="text-[10px] text-amber-400 font-bold" id="res-calc">₹99,000 saved → ₹3,465 Commission</span>
+                </div>
+                <!-- SVG Chart Mock -->
+                <svg viewBox="0 0 400 120" class="w-full overflow-visible">
+                  <!-- Grid Lines -->
+                  <line x1="20" y1="100" x2="380" y2="100" stroke="#2A2A35" stroke-dasharray="3,3" />
+                  <line x1="20" y1="60" x2="380" y2="60" stroke="#2A2A35" stroke-dasharray="3,3" />
+                  <line x1="20" y1="20" x2="380" y2="20" stroke="#2A2A35" stroke-dasharray="3,3" />
+
+                  <!-- Sparkline Saving Curve -->
+                  <path d="M 20 90 Q 110 80 200 30 T 380 15" fill="none" stroke="#F59E0B" stroke-width="3" class="path-animate" />
+                  <path d="M 20 90 Q 110 80 200 30 T 380 15 L 380 100 L 20 100 Z" fill="url(#grad-amber)" opacity="0.1" />
+
+                  <!-- Sparkline Commission Curve -->
+                  <path d="M 20 98 Q 110 95 200 90 T 380 85" fill="none" stroke="#6366F1" stroke-width="2" />
+                  
+                  <defs>
+                    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#F59E0B" />
+                      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  
+                  <!-- Dots -->
+                  <circle cx="380" cy="15" r="4" fill="#F59E0B" />
+                  <circle cx="380" cy="85" r="4" fill="#6366F1" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key SaaS Features Grid -->
+  <section id="features" class="py-24 px-6 border-t border-brand-border/40 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">Complete Zero-Maintenance Feature Set</h2>
+        <p class="text-brand-textGray mt-3 text-lg">Designed for maximum cashflow and absolute privacy.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">100% Offline Inference</h3>
+          <p class="text-sm text-brand-textGray leading-relaxed">Runs on your local computer via Ollama with Google Gemma 4. Sensitive balance sheets and inventory sheets never upload to any remote server.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="calculator" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">Smart vCFO Synthesis</h3>
+          <p class="text-sm text-brand-textGray leading-relaxed">Autodetects historic vendor rate overbillings, seasonal liquidity crunches, deadwood inventory items, and Input Tax Credit claims automatically.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="refresh-cw" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">Online/Offline Hybrid</h3>
+          <p class="text-sm text-brand-textGray leading-relaxed">Toggle to cloud Gemini with 1-click for zero-maintenance and zero API usage billing. Uses cookie persistence for effortless workspaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Global Pricing Switcher -->
+  <section id="pricing" class="py-24 px-6 border-t border-brand-border/40 bg-brand-card/20 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">Simple, Performance-Based Pricing</h2>
+        <p class="text-brand-textGray mt-4">Start free. Upgrade to DCLI to discover hidden profit leaks in your ledgers.</p>
+        
+        <!-- Pricing Toggle -->
+        <div class="flex justify-center mt-8">
+          <div class="inline-flex bg-[#111118] border border-[#2A2A35] rounded-xl p-1 gap-1 shadow-lg shadow-black/30">
+            <button
+              onclick="togglePricingMarket('IN')"
+              id="pricing-btn-in"
+              class="px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30"
+            >
+              <span>🇮🇳</span> India (INR)
+            </button>
+            <button
+              onclick="togglePricingMarket('UK')"
+              id="pricing-btn-uk"
+              class="px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-[#8B8B9E] hover:text-[#F4F4F8]"
+            >
+              <span>🇬🇧</span> United Kingdom (GBP)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-6 items-stretch">
+        
+        <!-- Free Tier -->
+        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-amber-500/20">
+          <p class="text-xs font-semibold uppercase tracking-widest text-[#8B8B9E] mb-2">Free</p>
+          <div class="flex items-baseline gap-1 mb-4">
+            <span class="text-4xl font-extrabold text-white">Free</span>
+          </div>
+          <p class="text-xs text-brand-textGray mb-6" id="pricing-desc-free">Perfect for testing local document indexing.</p>
+          
+          <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 3 active documents
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 5MB size limit
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> PDF document chats
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Online Gemini LLM engine
+            </li>
+          </ul>
+
+          <button onclick="triggerCustomLeadModal()" class="w-full border border-brand-border hover:border-amber-500/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
+            Get Started Free
+          </button>
+        </div>
+
+        <!-- Pro Plan (DCLI) -->
+        <div class="flex flex-col rounded-2xl border border-amber-500 bg-gradient-to-b from-amber-500/10 to-orange-500/5 p-8 transition-all shadow-[0_0_30px_rgba(245,158,11,0.15)] relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white uppercase tracking-wider">
+              Highly Recommended
+            </span>
+          </div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-[#8B8B9E] mb-2">Pro Tier (DCLI)</p>
+          <div class="flex items-baseline gap-1 mb-4">
+            <span class="text-4xl font-extrabold text-white" id="pricing-amt">₹999</span>
+            <span class="text-xs text-brand-textGray">/mo</span>
+          </div>
+          <p class="text-xs text-brand-textGray mb-6 font-medium" id="pricing-desc-pro">Full vCFO Audit Suite for Indian MSMEs</p>
+
+          <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
+            <li class="flex items-center gap-2.5 font-semibold text-white">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Unlimited workspaces
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 50MB file uploads
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Tally CSV, Excel, TXT, PDF support
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 100% Offline Google Gemma 4
+            </li>
+            <li class="flex items-center gap-2.5" id="pricing-tax-audit">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> GST mismatch reconciliations
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 3.5% commission on verified savings
+            </li>
+          </ul>
+
+          <button onclick="triggerCustomLeadModal()" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white py-3 rounded-xl text-xs font-bold transition-all shadow-md shadow-amber-900/30">
+            Request Partnership Access
+          </button>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-amber-500/20">
+          <p class="text-xs font-semibold uppercase tracking-widest text-[#8B8B9E] mb-2">Enterprise</p>
+          <div class="flex items-baseline gap-1 mb-4">
+            <span class="text-4xl font-extrabold text-white">Custom</span>
+          </div>
+          <p class="text-xs text-brand-textGray mb-6" id="pricing-desc-ent">For multi-branch wholesale networks.</p>
+
+          <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> All Pro features included
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Local dedicated GPU server setup
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Shared team corporate DNA profiles
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 24/7 dedicated system diagnostics SLA
+            </li>
+          </ul>
+
+          <button onclick="triggerCustomLeadModal()" class="w-full border border-brand-border hover:border-amber-500/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
+            Contact Sales
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Leads Modal Pop-up -->
+  <div id="leads-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-md bg-[#0D0D14] border border-amber-500/20 rounded-2xl p-6 shadow-2xl overflow-hidden">
+      <!-- Glow -->
+      <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/20 rounded-full blur-xl"></div>
+      
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-lg font-bold text-white font-heading flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-5 h-5 text-amber-400"></i> Secure DCLI Demo Invite
+        </h3>
+        <button onclick="closeLeadsModal()" class="text-brand-textGray hover:text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-brand-textGray leading-relaxed mb-6">
+        Fill in your business details below to secure a priority partner invite to the DCLI Pro pilot scheme. Get **₹1,000 / £10 off** your first savings statement!
+      </p>
+
+      <form id="modal-form" onsubmit="submitLeadInterest(event)" class="space-y-4">
+        <div>
+          <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Your Full Name</label>
+          <input type="text" id="modal-name" required placeholder="Charchit Dhawan" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+        </div>
+        <div>
+          <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Business Email Address</label>
+          <input type="email" id="modal-email" required placeholder="ceo@company.com" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+        </div>
+        <div>
+          <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Business Type</label>
+          <input type="text" id="modal-type" placeholder="e.g. CA Firm, Wholesaler, UK SMB" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+        </div>
+        
+        <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs py-3 rounded-xl transition-all shadow-lg shadow-amber-950">
+          Claim My vCFO priority slot
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border/40 py-12 px-6 bg-[#07070B]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-white"></i>
+        </div>
+        <span class="font-bold text-sm text-white">Docxter AI</span>
+      </div>
+      <p class="text-xs text-brand-textGray">© 2026 Docxter AI. All rights reserved. Proprietary Showcase Application.</p>
+      <div class="text-xs text-brand-textGray flex items-center gap-4">
+        <span>Running Google Gemma 4 Locally</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Lead capture Sales Advisor Chat Invite -->
+  <div id="floating-chat-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Bubble -->
+    <div id="chat-bubble" class="mb-3 mr-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-4 py-2.5 rounded-2xl rounded-br-sm shadow-xl animate-bounce flex items-center gap-1.5 border border-amber-400/30">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+      <span>vCFO Audit Invite: Save ₹1,000!</span>
+    </div>
+    <!-- Chat Button -->
+    <button onclick="toggleChatWindow()" class="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white flex items-center justify-center shadow-2xl transition-all border border-amber-400/30 hover:scale-105">
+      <i data-lucide="message-square" id="chat-icon" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Dynamic Chat Window -->
+  <div id="chat-window" class="fixed bottom-24 right-6 w-[360px] sm:w-[380px] h-[500px] rounded-2xl bg-[#0D0D14] border border-amber-500/20 shadow-2xl shadow-black/80 flex flex-col overflow-hidden hidden z-50">
+    <!-- Chat Header -->
+    <div class="p-4 bg-gradient-to-r from-amber-600/20 to-orange-600/10 border-b border-[#2A2A35] flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
+          <i data-lucide="brain" class="w-5 h-5 text-white animate-pulse"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-black text-[#F4F4F8] leading-none">Docxter Sales Advisor</h3>
+          <span class="text-[10px] text-amber-400 font-bold leading-tight flex items-center gap-1 mt-0.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Online Sandbox
+          </span>
+        </div>
+      </div>
+      <button onclick="toggleChatWindow()" class="text-brand-textGray hover:text-white transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-[#0A0A0F]/50 text-xs">
+      <div class="flex flex-col items-start">
+        <div class="p-3 rounded-2xl max-w-[85%] bg-brand-card border border-brand-border text-brand-textGray rounded-tl-sm whitespace-pre-line leading-relaxed">
+          👋 Namaste! I'm Docxter's business intelligence co-pilot. I can explain how we audit Tally spreadsheets locally, VAT/GST input tax claiming, and local privacy guarantees.
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Presets -->
+    <div class="px-4 py-2 border-t border-brand-border bg-[#0D0D14] flex flex-wrap gap-1.5">
+      <button onclick="sendChatMessage('What is DCLI?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">What is DCLI?</button>
+      <button onclick="sendChatMessage('Is it secure?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">Is it secure?</button>
+    </div>
+
+    <!-- Inputs -->
+    <div class="p-3 border-t border-brand-border bg-[#0A0A0F] flex gap-2">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Ask about DCLI, local Gemma 4..."
+        onkeydown="if(event.key === 'Enter') sendChatMessage(this.value)"
+        class="flex-1 bg-[#111118] border border-brand-border rounded-xl px-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500"
+      />
+      <button
+        onclick="sendChatMessage(document.getElementById('chat-input').value)"
+        class="w-8 h-8 rounded-xl bg-amber-600 hover:bg-amber-500 text-white flex items-center justify-center transition-colors"
+      >
+        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Lucide Script Initialization -->
+  <script>
+    lucide.createIcons();
+    
+    let activePricingMarket = "IN";
+    
+    // Simulate DCLI Processing Pipeline
+    function startSimulation(type) {
+      const defState = document.getElementById("sim-default");
+      const loadState = document.getElementById("sim-loading");
+      const resState = document.getElementById("sim-result");
+      
+      defState.classList.add("hidden");
+      resState.classList.add("hidden");
+      loadState.classList.remove("hidden");
+      
+      const loadTitle = document.getElementById("loading-title");
+      const loadDesc = document.getElementById("loading-desc");
+      
+      if(type === 'Tally') {
+        loadTitle.innerText = "Scanning Tally Ledger...";
+        loadDesc.innerText = "Scanning 150 transaction records, mapping vendor benchmarks...";
+      } else {
+        loadTitle.innerText = "Scrutinizing GST Invoices...";
+        loadDesc.innerText = "Comparing GSTR-2B input credit statements with Tally purchases...";
+      }
+      
+      setTimeout(() => {
+        loadState.classList.add("hidden");
+        resState.classList.remove("hidden");
+        
+        const container = document.getElementById("detections-container");
+        const calcText = document.getElementById("res-calc");
+        const resTitle = document.getElementById("res-title");
+        const resTime = document.getElementById("res-timestamp");
+        
+        container.innerHTML = "";
+        
+        if (type === 'Tally') {
+          resTitle.innerText = "Tally DNA Synthesized";
+          resTime.innerText = "Scan completed in 1.2 seconds";
+          calcText.innerText = "₹72,000 saved → ₹2,520 Commission";
+          
+          container.innerHTML = `
+            <div class="p-3 bg-brand-card border border-brand-border rounded-xl">
+              <div class="text-[10px] text-brand-textGray uppercase font-black">Vendor Benchmark Overbilling</div>
+              <div class="text-sm font-heading font-extrabold text-white mt-1">₹63,000 Saving Mismatch</div>
+              <p class="text-[10px] text-[#8B8B9E] mt-1">Patel Steel invoiced at ₹120/kg. Historic corporate benchmark is ₹105/kg.</p>
+            </div>
+            <div class="p-3 bg-brand-card border border-brand-border rounded-xl">
+              <div class="text-[10px] text-brand-textGray uppercase font-black">Deadwood Stock Found</div>
+              <div class="text-sm font-heading font-extrabold text-white mt-1">₹9,000 Working Capital Mismatch</div>
+              <p class="text-[10px] text-[#8B8B9E] mt-1">32 units of obsolete raw rubber sheets identified in warehouse sector B.</p>
+            </div>
+          `;
+        } else {
+          resTitle.innerText = "GST Tax Audit Synthesized";
+          resTime.innerText = "Scanned 84 statements in 1.6 seconds";
+          calcText.innerText = "₹1,50,000 recovered → ₹5,250 Commission";
+          
+          container.innerHTML = `
+            <div class="p-3 bg-brand-card border border-brand-border rounded-xl">
+              <div class="text-[10px] text-brand-textGray uppercase font-black">Unclaimed Input Tax Credit</div>
+              <div class="text-sm font-heading font-extrabold text-white mt-1">₹1,12,000 GSTR-2B Claim</div>
+              <p class="text-[10px] text-[#8B8B9E] mt-1">Unclaimed inputs from verified local supplier accounts flagged.</p>
+            </div>
+            <div class="p-3 bg-brand-card border border-brand-border rounded-xl">
+              <div class="text-[10px] text-brand-textGray uppercase font-black">GST Late Filing Mismatch</div>
+              <div class="text-sm font-heading font-extrabold text-white mt-1">₹38,000 Penalty Audit</div>
+              <p class="text-[10px] text-[#8B8B9E] mt-1">3 vendors failed to upload invoices to GSTR-1, blocking credit.</p>
+            </div>
+          `;
+        }
+      }, 1500);
+    }
+    
+    // Toggle Markets Pricing Tiers
+    function togglePricingMarket(market) {
+      activePricingMarket = market;
+      const btnIn = document.getElementById("pricing-btn-in");
+      const btnUk = document.getElementById("pricing-btn-uk");
+      const priceAmt = document.getElementById("pricing-amt");
+      const descFree = document.getElementById("pricing-desc-free");
+      const descPro = document.getElementById("pricing-desc-pro");
+      const taxAudit = document.getElementById("pricing-tax-audit");
+      
+      if (market === "IN") {
+        btnIn.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30";
+        btnUk.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-[#8B8B9E] hover:text-[#F4F4F8]";
+        priceAmt.innerText = "₹999";
+        descFree.innerText = "Perfect for testing local document indexing.";
+        descPro.innerText = "Full vCFO Audit Suite for Indian MSMEs";
+        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-amber-500"></i> GST mismatch reconciliations';
+      } else {
+        btnUk.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30";
+        btnIn.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-[#8B8B9E] hover:text-[#F4F4F8]";
+        priceAmt.innerText = "£49";
+        descFree.innerText = "Perfect for testing UK document indexing.";
+        descPro.innerText = "Full vCFO Audit Suite for UK SMBs";
+        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-amber-500"></i> VAT Audit Discrepancies';
+      }
+      lucide.createIcons();
+    }
+    
+    // Modal controls
+    function triggerCustomLeadModal() {
+      document.getElementById("leads-modal").classList.remove("hidden");
+    }
+    function closeLeadsModal() {
+      document.getElementById("leads-modal").classList.add("hidden");
+    }
+    
+    // Submit Lead Capture
+    function submitLeadInterest(e) {
+      e.preventDefault();
+      const name = document.getElementById("modal-name").value;
+      const email = document.getElementById("modal-email").value;
+      const type = document.getElementById("modal-type").value;
+      
+      alert(`🎟️ Priority demo slot secured for ${name} (${email})! We have sent a premium partnership overview packet to your email.`);
+      closeLeadsModal();
+    }
+    
+    // Chat invite floaters
+    function toggleChatWindow() {
+      const win = document.getElementById("chat-window");
+      const icon = document.getElementById("chat-icon");
+      const bubble = document.getElementById("chat-bubble");
+      
+      if(win.classList.contains("hidden")) {
+        win.classList.remove("hidden");
+        bubble.classList.add("hidden");
+      } else {
+        win.classList.add("hidden");
+      }
+    }
+    
+    function sendChatMessage(text) {
+      if(!text.trim()) return;
+      
+      const container = document.getElementById("chat-messages");
+      
+      // User message
+      const userDiv = document.createElement("div");
+      userDiv.className = "flex flex-col items-end mt-3";
+      userDiv.innerHTML = `
+        <div class="p-3 rounded-2xl max-w-[85%] bg-amber-600/10 border border-amber-500/20 text-white rounded-tr-sm">
+          ${text}
+        </div>
+      `;
+      container.appendChild(userDiv);
+      document.getElementById("chat-input").value = "";
+      container.scrollTop = container.scrollHeight;
+      
+      // Simulated response
+      setTimeout(() => {
+        const botDiv = document.createElement("div");
+        botDiv.className = "flex flex-col items-start mt-3";
+        let reply = "";
+        
+        const lower = text.toLowerCase();
+        if(lower.includes("dcli") || lower.includes("saving") || lower.includes("cost")) {
+          reply = "💎 **DCLI (Core Ledger Intelligence)** automatically maps Tally ledgers to find input tax credits and supplier rate hikes. You pay 3.5% commission only on verified savings, otherwise ₹0!";
+        } else if(lower.includes("secure") || lower.includes("private") || lower.includes("offline")) {
+          reply = "🔒 **100% Secure & Private.** Docxter uses local Gemma 4 on your computer to process ledgers. Your confidential balance sheets never leave your workspace.";
+        } else {
+          reply = "⚡ Docxter is the premium zero-maintenance audit assistant. It combines beautiful financial visualization graphs, CSV PO creation, and secure localized chat.";
+        }
+        
+        botDiv.innerHTML = `
+          <div class="p-3 rounded-2xl max-w-[85%] bg-brand-card border border-brand-border text-brand-textGray rounded-tl-sm whitespace-pre-line leading-relaxed">
+            ${reply}
+          </div>
+        `;
+        container.appendChild(botDiv);
+        container.scrollTop = container.scrollHeight;
+      }, 700);
+    }
+  </script>
+</body>
+</html>
