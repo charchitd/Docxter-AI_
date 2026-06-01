@@ -109,7 +109,7 @@ $$\text{Monthly Billing} = \text{Base Subscription} + (2.5\% \times \max(0, \tex
 
 Running corporate ledgers offline requires configuring Ollama and allocating system RAM/VRAM resource pools. Docxter provides a **direct installation & configuration assistance service**:
 
-* 🎁 **Promotional Launch Launchpad:** **The first 10 businesses are 100% FREE!**
+* 🎁 **Promotional Launch Launchpad:** **The first 20 businesses are 100% FREE!**
 * ⚡ **Standard Setup Fee:** A flat **₹1,000 / £10** standard setup fee after the promo limit.
 * **What's Included:**
   * Background Ollama service daemon installation and pre-loading tuning.
