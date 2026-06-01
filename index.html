@@ -824,6 +824,34 @@
   <script>
     lucide.createIcons();
     
+    // Professional typography formatting for bot chat answers
+    function formatProfessionalChatHTML(text) {
+      if(!text) return "";
+      let html = text;
+      
+      // Clean raw newlines
+      html = html.replace(/\\n/g, "\n");
+      
+      // Format Bold: **text** -> <strong class="font-bold text-[#F4F4F8]">...</strong>
+      html = html.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-bold text-[#F4F4F8]">$1</strong>');
+      
+      // Format Italics: _text_ -> <em class="italic text-[#A2A2B5]">...</em>
+      html = html.replace(/_([^_]+)_/g, '<em class="italic text-[#A2A2B5]">$1</em>');
+      
+      // Format Underline: __text__ -> <span class="underline decoration-amber-500 decoration-2 underline-offset-4 font-extrabold text-white">...</span>
+      html = html.replace(/__([^_]+)__/g, '<span class="underline decoration-amber-500 decoration-2 underline-offset-4 font-extrabold text-white">$1</span>');
+      
+      // Replace linebreaks with clean paragraphs or bullet lists
+      html = html.split('\n').map(line => {
+        if (line.trim().startsWith('-')) {
+          return `<li class="ml-3.5 list-disc text-[11px] text-brand-textGray/90 mt-1 pl-1">${line.trim().substring(1).trim()}</li>`;
+        }
+        return `<p class="mt-1.5 first:mt-0">${line}</p>`;
+      }).join('');
+      
+      return html;
+    }
+    
     // How to Use Workspace Simulator Logic
     let activeHtuStep = 1;
     let activeHtuSecurityMode = "offline";
@@ -899,17 +927,17 @@
       if(queryType === 'benchmark') {
         userMsg.innerText = '"Which vendors overcharged us?"';
         setTimeout(() => {
-          botMsg.innerHTML = "📊 **Benchmark Cost Savings:**\\nI matched Tally ledger entries. **Patel Steel** overcharged you by **₹15/kg** on structural steel, causing **₹63,000** in leaks. Ready to draft recovery letter.";
+          botMsg.innerHTML = formatProfessionalChatHTML("📊 **Benchmark Cost Savings:**\nI matched Tally ledger entries.\n- Supplier **Patel Steel** overcharged by **₹15/kg** on steel rods.\n- Total Savings Identified: __₹63,000__.\n\n_Auto-drafting formal refund recovery letter..._");
         }, 800);
       } else if(queryType === 'tax') {
         userMsg.innerText = '"Calculate unclaimed input credits."';
         setTimeout(() => {
-          botMsg.innerHTML = "🧾 **Input Credit Claims:**\\nIdentified **₹1,12,000 in unclaimed GSTR-2B credits** from 4 local wholesalers. Auto-draft reminders generated to claim tax capital.";
+          botMsg.innerHTML = formatProfessionalChatHTML("🧾 **Input Credit Claims Audit:**\nI cross-referenced GSTR-2B filing statements.\n- Unclaimed credits found: __₹1,12,000__.\n- Vendor mismatches: **4 distributors** failed to upload GSTR-1.\n\n_Reminders generated successfully to claim capital._");
         }, 800);
       } else {
         userMsg.innerText = '"Predict product demand trends."';
         setTimeout(() => {
-          botMsg.innerHTML = "📈 **Sales Projections:**\\nSeasonal metrics forecast an **18% seasonal demand surge for HDPE pipes** next month. Recommend order placement at ₹105/kg to protect margins.";
+          botMsg.innerHTML = formatProfessionalChatHTML("📈 **Sales Projections:**\nSeasonal metrics forecast and analyze historical product volume cycles.\n- Cycle Spike: **18% seasonal demand surge for HDPE pipes** next month.\n- Benchmark order saving projection: __₹22,000__.");
         }, 800);
       }
     }
@@ -1132,13 +1160,13 @@
         
         const lower = text.toLowerCase();
         if(lower.includes("vendors") || lower.includes("charged us above")) {
-          reply = "📊 **DCLI Rate Benchmark Audit:**\nI compared your Tally sales ledger with historical supplier quotes. **Patel Steel** overcharged you by **₹15 per kg** in October on steel pipes, totaling **₹63,000** in cost leakages. Would you like me to auto-draft a rate mismatch recovery letter for Patel Steel?";
+          reply = "📊 **DCLI Rate Benchmark Audit:**\nI compared your Tally sales ledger with historical supplier quotes.\n- **Patel Steel** overcharged you by **₹15 per kg** in October on steel pipes.\n- Total Leakage Identified: __₹63,000__.\n\n_Strategy:_ Would you like me to auto-draft a rate mismatch recovery letter for Patel Steel?";
         } else if(lower.includes("gstr-2b") || lower.includes("tax credit") || lower.includes("unclaimed")) {
-          reply = "🧾 **GST/VAT Tax Recovery Audit:**\nI matched your purchase journal against filed GSTR-2B statements. There is **₹1,12,000 in unclaimed GSTR-2B Input Tax Credits** from 4 local vendors who delayed filing their GSTR-1, blocking your cash flow. Docxter can auto-generate a follow-up email list demanding they upload their filings.";
+          reply = "🧾 **GST/VAT Tax Recovery Audit:**\nI matched your purchase journal against filed GSTR-2B statements.\n- Unclaimed Input Credits: __₹1,12,000__.\n- Delayed Vendors: **4 suppliers** who failed to upload GSTR-1, blocking your capital.\n\n_Recommended Action:_ Auto-generate follow-up notices demanding immediate filing upload to release credits.";
         } else if(lower.includes("demand cycles") || lower.includes("seasonal demand") || lower.includes("spike")) {
-          reply = "📈 **Predictive Product Intelligence:**\nBy analyzing past seasonal sales data, I predict an **18% increase in demand for HDPE Pipes** next month due to agricultural season cycles. Pre-ordering now at our benchmarked rate of **₹105/kg** rather than market rate will save you **₹22,000**.";
+          reply = "📈 **Predictive Product Intelligence:**\nBy analyzing past seasonal sales datasets:\n- **Spike Forecast:** I predict a **18% seasonal demand surge for HDPE Pipes** next month.\n- **Pricing Option:** Pre-ordering at our benchmarked rate of **₹105/kg** (vs ₹120/kg surge) will secure __₹22,000__ in margin gains.";
         } else if(lower.includes("churn risks") || lower.includes("churn-risk") || lower.includes("churn")) {
-          reply = "👥 **Customer Retention Advisory:**\nI flagged **3 wholesale accounts** (Sharma Traders, UK Build Ltd, and Gupta Logistics) whose payment latency average exceeded **45 days**, signaling high churn risk. I suggest pushing an automated invoice-settlement discount code to secure capital and retention.";
+          reply = "👥 **Customer Retention Advisory:**\nI scanned payment latencies in your historical accounts ledger.\n- **High Risk Accounts:** **3 wholesale clients** (Sharma Traders, UK Build Ltd, and Gupta Logistics) whose average payment latency exceeded **45 days**.\n- Sharma Traders shows immediate signs of customer churn.\n\n_Mitigation:_ Pushing an automated invoice discount to secure immediate capital.";
         } else if(lower.includes("dcli") || lower.includes("saving") || lower.includes("cost")) {
           reply = "💎 **DCLI (Core Ledger Intelligence)** automatically maps Tally ledgers to find input tax credits and supplier rate hikes. You pay 3.5% commission only on verified savings, otherwise ₹0!";
         } else if(lower.includes("secure") || lower.includes("private") || lower.includes("offline")) {
@@ -1148,8 +1176,8 @@
         }
         
         botDiv.innerHTML = `
-          <div class="p-3 rounded-2xl max-w-[85%] bg-brand-card border border-brand-border text-brand-textGray rounded-tl-sm whitespace-pre-line leading-relaxed">
-            ${reply}
+          <div class="p-3 rounded-2xl max-w-[85%] bg-brand-card border border-brand-border text-brand-textGray rounded-tl-sm leading-relaxed text-[11px] font-medium tracking-wide">
+            ${formatProfessionalChatHTML(reply)}
           </div>
         `;
         container.appendChild(botDiv);
