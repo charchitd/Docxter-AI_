@@ -45,7 +45,7 @@ Most small businesses in India and the UK lose between **3% to 5% of their month
 | 🔒 **100% Local Privacy** | Runs entirely on your local computer using **Google Gemma 4** (via Ollama) and pgvector. | Sensitive balance sheets, tax reports, and client directories **never** touch a third-party cloud server. |
 | 📊 **Autonomous DCLI Engine** | Core Ledger Intelligence automatically tracks rate deviations, late payers, and warehouse bottlenecks. | Moves you from passive document reading to **proactive cash flow generation** with no manual entry. |
 | 🇮🇳 🇬🇧 **GST & VAT Localization** | Dual-regional audit rules specifically designed to detect unclaimed GSTR-2B (India) and VAT double-charges (UK). | Fully tailored to regional tax codes, replacing expensive corporate audit consultants. |
-| 💰 **Performance-Based Pricing** | Base tier at ₹999 (IN) / £49 (UK) per month plus a **3.5% commission on verified savings**. | We align our cash flow directly with yours. If Docxter detects ₹0 in savings, you pay ₹0 in commission. |
+| 💰 **Performance-Based Pricing** | Base tier at ₹799 (IN) / £29 (UK) per month plus a **2.5% commission on verified savings (first ₹10,000/£100 free)**. | We align our cash flow directly with yours. If Docxter detects ₹0 in savings, you pay ₹0 in commission. |
 
 ---
 
@@ -64,7 +64,7 @@ Docxter AI is custom-engineered to solve these challenges for Indian wholesalers
 
 * 🖥️ **100% Offline Local Chat:** Processes ledgers locally on your office computer using **Google Gemma 4** (via Ollama) and pgvector. Your files never leave your system.
 * 💰 **₹0 / £0 Cloud Bills:** Zero operational API overhead in offline mode.
-* 📈 **Performance-Based Pricing:** We only bill you a 3.5% commission on verified savings our AI finds (GST/VAT recovery, overbilled supplier rate benchmark gaps, deadwood stock).
+* 📈 **Performance-Based Pricing:** We only bill you a 2.5% value fee on verified savings our AI finds beyond the first **₹10,000 / £100** (which are 100% FREE!).
 
 ---
 
@@ -89,17 +89,32 @@ Effortlessly switch between lightning-fast cloud Gemini models (utilizing free t
 
 ## 💼 DCLI Commission Structure (SaaS Model)
 
-Docxter operates on a unique **₹999 (IN) / £49 (UK) monthly subscription** base plus a performance share of recovered savings:
+Docxter operates on a predictive **₹799 (IN) / £29 (UK) monthly subscription** base plus a performance-aligned shared-value kicker:
 
-$$\text{Monthly Billing} = \text{Base Subscription} + (3.5\% \times \text{Verified Audited Savings})$$
+$$\text{Monthly Billing} = \text{Base Subscription} + (2.5\% \times \max(0, \text{Verified Savings} - \text{Free Threshold}))$$
+
+* **Free Threshold:** The first **₹10,000 (IN) / £100 (UK)** of detected cost-leak savings each month are **100% FREE** of any commission!
 
 ### Example Monthly Commission Audit:
-| Category | Recovery Scenario | Verified Saving | Commission (3.5%) |
+| Category | Recovery Scenario | Verified Saving | Commission (2.5% after ₹10k Free) |
 |:---|:---|:---:|:---:|
-| 🧾 **Tax Credit** | Unclaimed Input Credit (GSTR-2B) | ₹1,50,000 | ₹5,250.00 |
-| 🏷️ **Purchases** | Vendor Overbilling Benchmark Gap | ₹15,000 | ₹525.00 |
-| 📦 **Stock** | Obsolete Deadwood Inventory Liquidated | ₹80,000 | ₹2,800.00 |
-| **Total** | | **₹2,45,000** | **₹8,575.00** |
+| 🧾 **Tax Credit** | Unclaimed Input Credit (GSTR-2B) | ₹1,50,000 | ₹3,750.00 |
+| 🏷️ **Purchases** | Vendor Overbilling Benchmark Gap | ₹15,000 | ₹375.00 |
+| 📦 **Stock** | Obsolete Deadwood Inventory Liquidated | ₹80,000 | ₹2,000.00 |
+| **Total Savings** | | **₹2,45,000** | **₹5,875.00** |
+
+---
+
+## 🛠️ White-Glove Gemma 4 Local Setup Service
+
+Running corporate ledgers offline requires configuring Ollama and allocating system RAM/VRAM resource pools. Docxter provides a **direct installation & configuration assistance service**:
+
+* 🎁 **Promotional Launch Launchpad:** **The first 10 businesses are 100% FREE!**
+* ⚡ **Standard Setup Fee:** A flat **₹1,000 / £10** standard setup fee after the promo limit.
+* **What's Included:**
+  * Background Ollama service daemon installation and pre-loading tuning.
+  * Google Gemma 4 model weight downloads and local vector embeddings caching setup.
+  * Optimized GPU/CPU thread core allocation to ensure rapid 1.2-second ledger sweeps.
 
 ---
 
