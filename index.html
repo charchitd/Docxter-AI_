@@ -126,7 +126,7 @@
       <!-- Simulator Board -->
       <div class="rounded-2xl border border-brand-border bg-[#0D0D14] overflow-hidden shadow-2xl shadow-black/80">
         <!-- Window Controls -->
-        <div class="flex items-center justify-between px-5 py-3.5 border-b border-brand-border bg-[#14141E]">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-3.5 border-b border-brand-border bg-[#14141E]">
           <div class="flex items-center gap-2">
             <span class="w-3.5 h-3.5 rounded-full bg-red-500/70"></span>
             <span class="w-3.5 h-3.5 rounded-full bg-yellow-500/70"></span>
@@ -135,8 +135,23 @@
               <i data-lucide="terminal" class="w-3 h-3 text-amber-500"></i> dcli_synthesizer.bin
             </span>
           </div>
-          <div class="text-xs text-amber-500 font-bold flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span> 100% Offline Mode (Gemma 4)
+          
+          <!-- Sandbox Toggle Mode -->
+          <div class="flex items-center gap-2 bg-[#0A0A0F] border border-brand-border rounded-lg p-0.5 self-start sm:self-auto">
+            <button
+              onclick="setSandboxMode('online')"
+              id="sb-online-btn"
+              class="px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white"
+            >
+              <i data-lucide="zap" class="w-3 h-3 text-yellow-400"></i> Cloud (Gemini)
+            </button>
+            <button
+              onclick="setSandboxMode('offline')"
+              id="sb-offline-btn"
+              class="px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-amber-600 text-white shadow shadow-amber-900/30"
+            >
+              <i data-lucide="shield" class="w-3 h-3 text-amber-400"></i> Local (Gemma 4)
+            </button>
           </div>
         </div>
 
@@ -217,8 +232,8 @@
                   <p class="text-[10px] text-brand-textGray" id="res-timestamp">Scan run completed in 1.4 seconds</p>
                 </div>
                 <div class="text-right">
-                  <span class="text-[10px] bg-green-500/20 text-green-400 font-bold border border-green-500/30 px-2.5 py-1 rounded-full">
-                    Audited Locally
+                  <span id="audit-badge" class="text-[10px] bg-green-500/20 text-green-400 font-bold border border-green-500/30 px-2.5 py-1 rounded-full flex items-center gap-1">
+                    <i data-lucide="shield" class="w-3 h-3 text-green-400"></i> Audited Locally (Gemma 4)
                   </span>
                 </div>
               </div>
@@ -562,6 +577,32 @@
     lucide.createIcons();
     
     let activePricingMarket = "IN";
+    let activeSandboxMode = "offline";
+    
+    function setSandboxMode(mode) {
+      activeSandboxMode = mode;
+      const onlineBtn = document.getElementById("sb-online-btn");
+      const offlineBtn = document.getElementById("sb-offline-btn");
+      
+      if(mode === 'online') {
+        onlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-yellow-600 text-white shadow shadow-yellow-900/30";
+        offlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white";
+        const badge = document.getElementById("audit-badge");
+        if(badge) {
+          badge.className = "text-[10px] bg-yellow-500/20 text-yellow-400 font-bold border border-yellow-500/30 px-2.5 py-1 rounded-full animate-pulse";
+          badge.innerHTML = '<i data-lucide="zap" class="w-3 h-3 inline mr-1 text-yellow-400"></i> Cloud Gemini Active';
+        }
+      } else {
+        offlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-amber-600 text-white shadow shadow-amber-900/30";
+        onlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white";
+        const badge = document.getElementById("audit-badge");
+        if(badge) {
+          badge.className = "text-[10px] bg-green-500/20 text-green-400 font-bold border border-green-500/30 px-2.5 py-1 rounded-full";
+          badge.innerHTML = '<i data-lucide="shield" class="w-3 h-3 inline mr-1 text-green-400"></i> Audited Locally (Gemma 4)';
+        }
+      }
+      lucide.createIcons();
+    }
     
     // Simulate DCLI Processing Pipeline
     function startSimulation(type) {
@@ -576,15 +617,17 @@
       const loadTitle = document.getElementById("loading-title");
       const loadDesc = document.getElementById("loading-desc");
       
+      const modeSuffix = activeSandboxMode === 'online' ? " via Cloud Gemini API..." : " locally on office computer via Gemma 4...";
+      
       if(type === 'Tally') {
         loadTitle.innerText = "Scanning Tally Ledger...";
-        loadDesc.innerText = "Scanning 150 transaction records, mapping vendor benchmarks...";
+        loadDesc.innerText = "Scanning 150 transaction records, mapping vendor benchmarks" + modeSuffix;
       } else if(type === 'GST') {
         loadTitle.innerText = "Scrutinizing GST Invoices...";
-        loadDesc.innerText = "Comparing GSTR-2B input credit statements with Tally purchases...";
+        loadDesc.innerText = "Comparing GSTR-2B input credit statements with Tally purchases" + modeSuffix;
       } else {
         loadTitle.innerText = "Modeling Market & Product Analytics...";
-        loadDesc.innerText = "Parsing historical order frequencies and stock turnover metrics locally...";
+        loadDesc.innerText = "Parsing historical order frequencies and stock turnover metrics" + modeSuffix;
       }
       
       setTimeout(() => {
@@ -650,6 +693,7 @@
             </div>
           `;
         }
+        setSandboxMode(activeSandboxMode);
       }, 1500);
     }
     
