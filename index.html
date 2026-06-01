@@ -283,6 +283,90 @@
     </div>
   </section>
 
+  <!-- Interactive How to Use Section -->
+  <section id="how-to-use" class="py-20 px-6 border-t border-brand-border/40 bg-[#07070B] relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">💡 How to Use Docxter AI?</h2>
+        <p class="text-brand-textGray mt-3 text-lg font-heading">Follow three simple steps to start analyzing, optimizing, and auditing your business files.</p>
+      </div>
+
+      <!-- Three Steps Layout -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">1</div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="upload-cloud" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Upload Raw Files</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Drag & drop Tally sales logs, GSTR/VAT tax spreadsheets, supplier rate agreements, or raw inventory datasets.</p>
+        </div>
+
+        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">2</div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="toggle-left" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Toggle Ingest Mode</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Switch to Cloud (Gemini) for high-speed metadata audits, or Local (Gemma 4) for 100% offline air-gapped private ledger indexing.</p>
+        </div>
+
+        <div class="relative flex flex-col items-center text-center p-6 bg-brand-card/30 border border-brand-border/50 rounded-2xl">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 font-heading">3</div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="message-square" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Query & Decide</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Ask business-grade queries directly to your workspace. Get instant interactive charts, inventory metrics, and customized predictions.</p>
+        </div>
+      </div>
+
+      <!-- Click to Ask prompt playground -->
+      <div class="rounded-2xl border border-brand-border bg-[#0D0D14] p-6 md:p-8">
+        <h3 class="text-lg font-bold text-white font-heading mb-3 flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-5 h-5 text-amber-400 flex-shrink-0 animate-pulse"></i> Interactive Prompt Playground
+        </h3>
+        <p class="text-xs text-brand-textGray mb-6">Select a regional market audit or sales analytics question below. The pre-sales co-pilot will automatically slide open and answer instantly!</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Cost Recovery -->
+          <div class="space-y-3">
+            <h4 class="text-xs uppercase tracking-wider font-bold text-amber-400 flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-500"></i> Audits & Cost Savings (INR/GBP)
+            </h4>
+            <div class="space-y-2">
+              <button onclick="triggerPlaygroundQuestion('Which vendors charged us above past rates?')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+                <span>"Which vendors charged us above our historical price benchmarks?"</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+              </button>
+              <button onclick="triggerPlaygroundQuestion('Show me our GSTR-2B Input Credit claims.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+                <span>"Show me a list of unclaimed GSTR-2B Input Credits."</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product & Sales -->
+          <div class="space-y-3">
+            <h4 class="text-xs uppercase tracking-wider font-bold text-indigo-400 flex items-center gap-1.5">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5 text-indigo-400"></i> Market & Product Analytics
+            </h4>
+            <div class="space-y-2">
+              <button onclick="triggerPlaygroundQuestion('Predict high-margin demand cycles next month.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+                <span>"Which products will experience seasonal demand spikes next month?"</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+              </button>
+              <button onclick="triggerPlaygroundQuestion('Identify wholesaler churn risks.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+                <span>"Identify client accounts at risk of churning due to payment delay."</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Key SaaS Features Grid -->
   <section id="features" class="py-24 px-6 border-t border-brand-border/40 relative">
     <div class="max-w-6xl mx-auto">
@@ -758,6 +842,17 @@
       }
     }
     
+    function triggerPlaygroundQuestion(text) {
+      const win = document.getElementById("chat-window");
+      if(win.classList.contains("hidden")) {
+        toggleChatWindow();
+      }
+      sendChatMessage(text);
+      // Ensure the chat container remains fully visible
+      const chatWin = document.getElementById("chat-window");
+      chatWin.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+    
     function sendChatMessage(text) {
       if(!text.trim()) return;
       
@@ -782,7 +877,15 @@
         let reply = "";
         
         const lower = text.toLowerCase();
-        if(lower.includes("dcli") || lower.includes("saving") || lower.includes("cost")) {
+        if(lower.includes("vendors") || lower.includes("charged us above")) {
+          reply = "📊 **DCLI Rate Benchmark Audit:**\nI compared your Tally sales ledger with historical supplier quotes. **Patel Steel** overcharged you by **₹15 per kg** in October on steel pipes, totaling **₹63,000** in cost leakages. Would you like me to auto-draft a rate mismatch recovery letter for Patel Steel?";
+        } else if(lower.includes("gstr-2b") || lower.includes("tax credit") || lower.includes("unclaimed")) {
+          reply = "🧾 **GST/VAT Tax Recovery Audit:**\nI matched your purchase journal against filed GSTR-2B statements. There is **₹1,12,000 in unclaimed GSTR-2B Input Tax Credits** from 4 local vendors who delayed filing their GSTR-1, blocking your cash flow. Docxter can auto-generate a follow-up email list demanding they upload their filings.";
+        } else if(lower.includes("demand cycles") || lower.includes("seasonal demand") || lower.includes("spike")) {
+          reply = "📈 **Predictive Product Intelligence:**\nBy analyzing past seasonal sales data, I predict an **18% increase in demand for HDPE Pipes** next month due to agricultural season cycles. Pre-ordering now at our benchmarked rate of **₹105/kg** rather than market rate will save you **₹22,000**.";
+        } else if(lower.includes("churn risks") || lower.includes("churn-risk") || lower.includes("churn")) {
+          reply = "👥 **Customer Retention Advisory:**\nI flagged **3 wholesale accounts** (Sharma Traders, UK Build Ltd, and Gupta Logistics) whose payment latency average exceeded **45 days**, signaling high churn risk. I suggest pushing an automated invoice-settlement discount code to secure capital and retention.";
+        } else if(lower.includes("dcli") || lower.includes("saving") || lower.includes("cost")) {
           reply = "💎 **DCLI (Core Ledger Intelligence)** automatically maps Tally ledgers to find input tax credits and supplier rate hikes. You pay 3.5% commission only on verified savings, otherwise ₹0!";
         } else if(lower.includes("secure") || lower.includes("private") || lower.includes("offline")) {
           reply = "🔒 **100% Secure & Private.** Docxter uses local Gemma 4 on your computer to process ledgers. Your confidential balance sheets never leave your workspace.";
