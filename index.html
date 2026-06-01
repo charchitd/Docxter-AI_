@@ -794,6 +794,91 @@
     </div>
   </div>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 px-6 border-t border-brand-border/40 relative overflow-hidden bg-[#0A0A0F]">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_-10%,rgba(245,158,11,0.06),transparent)] pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-4">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 animate-pulse"></i> Frequently Asked Questions
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading leading-tight">
+          Clear Answers to Your Perspectives
+        </h2>
+        <p class="text-xs text-brand-textGray mt-3 max-w-lg mx-auto">
+          Everything you need to know about local offline privacy, our performance-aligned revenue share, and quick setup integrations.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
+            <span class="text-sm font-bold text-white pr-4">🔒 Is my sensitive Tally and GST tax data secure with Docxter?</span>
+            <div id="faq-icon-1" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div id="faq-content-1" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
+            Absolute air-gapped security is our core promise. By choosing our <strong class="text-white">Offline Mode</strong>, Docxter runs entirely on your local office hardware using Google's Gemma 4. Your invoices, vendor transaction history, and tax statements never leave your physical computer. There are no background server uploads, meaning complete compliance with GDPR and confidentiality regulations.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
+            <span class="text-sm font-bold text-white pr-4">💰 How does the 2.5% Performance Commission work in practice?</span>
+            <div id="faq-icon-2" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div id="faq-content-2" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
+            We only make money when you save money. The first <strong class="text-white">₹10,000 / £100</strong> of verified savings (e.g. unclaimed GSTR-2B Input Tax Credit, vendor overbilling anomalies) is <strong class="text-amber-400">100% commission-free</strong>. Beyond that, we invoice a small 2.5% shared-value commission. If Docxter's audits find ₹0 in savings, you pay only the flat ₹799 / £29 subscription fee!
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
+            <span class="text-sm font-bold text-white pr-4">🛠️ I am not tech-savvy. How do I set up Ollama and local Gemma 4?</span>
+            <div id="faq-icon-3" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div id="faq-content-3" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
+            That's exactly why we offer our premium <strong class="text-white">White-Glove Desktop Installation Service</strong>. To celebrate our launch, the first 10 businesses get it 100% FREE (only 2 slots left!). Our deployment specialists connect remotely, install Ollama background services, cache local embedding layers, and calibrate core CPU/GPU thread assignments for optimal 1.2-second ledger scans.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
+            <span class="text-sm font-bold text-white pr-4">📊 Can Docxter parse custom spreadsheets and non-standard invoice formats?</span>
+            <div id="faq-icon-4" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div id="faq-content-4" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
+            Yes! Docxter's document intelligence engine is fully agnostic. You can upload standard PDF receipts, raw Excel tallies, CSV inventory journals, Tally balances, or plain TXT memos. It automatically extracts vendor line-items, identifies delayed credits, and cross-references historical averages to find capital leakages instantly.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+          <button onclick="toggleFaq(5)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
+            <span class="text-sm font-bold text-white pr-4">🧠 How is Docxter different from a standard ChatGPT wrapper?</span>
+            <div id="faq-icon-5" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div id="faq-content-5" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
+            ChatGPT wrappers send your entire proprietary corporate balance history directly to external server clouds, exposing you to severe data leaks. In contrast, Docxter uses a <strong class="text-white">fully offline, locally air-gapped vector search</strong> and LLM inference engine. We don't just "chat" with documents; we compile your data into a cohesive Corporate DNA profile to execute algorithmic audit rules specifically tuned for financial reconciliation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="border-t border-brand-border/40 py-12 px-6 bg-[#07070B]">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -1258,6 +1343,25 @@
         }
       }
     });
+
+    // Toggle FAQ Accordion content & animate chevron
+    function toggleFaq(num) {
+      const content = document.getElementById("faq-content-" + num);
+      const icon = document.getElementById("faq-icon-" + num);
+      
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        icon.style.transform = "rotate(180deg)";
+        icon.classList.add("border-amber-500/40");
+        icon.classList.remove("border-brand-border");
+      } else {
+        content.classList.add("hidden");
+        icon.style.transform = "rotate(0deg)";
+        icon.classList.remove("border-amber-500/40");
+        icon.classList.add("border-brand-border");
+      }
+      lucide.createIcons();
+    }
   </script>
 </body>
 </html>
