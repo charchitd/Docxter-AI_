@@ -77,9 +77,13 @@
         <a href="#features" class="hover:text-white transition-colors">Features</a>
         <a href="#pricing" class="hover:text-white transition-colors">Pricing Structure</a>
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        <a href="http://localhost:3001/login" class="hover:text-white transition-colors">Portal Login</a>
       </nav>
-      <div>
-        <a href="#demo" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-amber-950/50 hover:scale-105">
+      <div class="flex items-center gap-4">
+        <a href="http://localhost:3001/login" class="hidden sm:inline-block text-xs font-bold text-[#8B8B9E] hover:text-white transition-colors">
+          Sign In
+        </a>
+        <a href="http://localhost:3001/signup" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-amber-950/50 hover:scale-105">
           Try Live Sandbox <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
@@ -1247,8 +1251,9 @@
       const email = document.getElementById("modal-email").value;
       const type = document.getElementById("modal-type").value;
       
-      alert(`🎟️ Priority demo slot secured for ${name} (${email})! We have sent a premium partnership overview packet to your email.`);
+      alert(`🎟️ Priority demo slot secured for ${name} (${email})! Opening your private Docxter subscription portal...`);
       closeLeadsModal();
+      window.location.href = "http://localhost:3001/signup";
     }
     
     // Chat invite floaters
