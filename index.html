@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Docxter AI — Premium Document Intelligence & vCFO Audit Suite</title>
+  <title>Docxter AI — WhatsApp-First vCFO for Indian MSMEs & UK SMBs</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Secure, privacy-first local document intelligence and autonomous cost-saving audits powered by Google Gemma 4 for Indian MSMEs and UK SMBs.">
-  
+  <meta name="description" content="Stop losing money on missing Input Tax Credits, overdue debts, and stagnant inventory. Forward Tally backups to WhatsApp for instant verified financial audits powered by Gemma 4.">
+  <meta name="keywords" content="vCFO, WhatsApp audit, Tally integration, GST reconciliation, DCLI, Indian MSME, small business finance">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,240 +16,590 @@
         extend: {
           colors: {
             brand: {
-              dark: '#0A0A0F',
+              dark: '#06060B',
+              bg: '#09090E',
               card: '#111118',
-              border: '#2A2A35',
-              accent: '#F59E0B',
-              accentHover: '#D97706',
+              cardHover: '#161622',
+              border: '#242432',
+              borderHover: '#3A3A52',
+              accent: '#6366F1',
+              accentLight: '#818CF8',
+              accentSoft: '#4F52D3',
               textGray: '#8B8B9E',
+              textMid: '#C4C4D4',
               textLight: '#F4F4F8'
             }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          },
+          boxShadow: {
+            'glow-indigo': '0 0 40px rgba(99,102,241,0.18)',
+            'glow-indigo-sm': '0 0 20px rgba(99,102,241,0.12)',
+            'glow-indigo-lg': '0 0 80px rgba(99,102,241,0.25)',
+            'card': '0 4px 24px rgba(0,0,0,0.4)',
+            'card-hover': '0 8px 40px rgba(0,0,0,0.55)',
           }
         }
       }
     }
   </script>
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Styles -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0A0A0F;
-      color: #F4F4F8;
-    }
-    h1, h2, h3, .font-heading {
-      font-family: 'Outfit', sans-serif;
-    }
-    .glass {
-      background: rgba(17, 17, 24, 0.7);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(42, 42, 53, 0.5);
-    }
-    .glow-orange {
-      box-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
-    }
-  </style>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    
+    :root {
+      --clr-indigo: #6366F1;
+      --clr-violet: #8B5CF6;
+      --clr-indigo-light: #818CF8;
+      --clr-bg: #06060B;
+      --clr-card: #111118;
+      --clr-border: #242432;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--clr-bg);
+      color: #F4F4F8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', system-ui, sans-serif;
+    }
+    
+    /* === Custom scrollbar === */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #0A0A0F; }
+    ::-webkit-scrollbar-thumb { background: #2A2A40; border-radius: 8px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6366F1; }
+    
+    /* === Glass morphism === */
+    .glass {
+      background: rgba(17, 17, 24, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(36, 36, 50, 0.7);
+    }
+    
+    .glass-card {
+      background: rgba(17, 17, 24, 0.80);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(36, 36, 50, 0.6);
+    }
+    
+    /* === Gradient text === */
+    .gradient-text {
+      background: linear-gradient(135deg, #818CF8, #a78bfa, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* === Section badge === */
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      border: 1px solid rgba(99,102,241,0.3);
+      background: rgba(99,102,241,0.08);
+      color: #818CF8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* === Glow effects === */
+    .glow-indigo { box-shadow: 0 0 40px rgba(99,102,241,0.18); }
+    .glow-indigo-xs { box-shadow: 0 0 16px rgba(99,102,241,0.12); }
+    
+    /* === Animated border gradient === */
+    .border-gradient {
+      border: 1px solid transparent;
+      background: linear-gradient(#111118, #111118) padding-box,
+                  linear-gradient(135deg, #6366F1, #8B5CF6) border-box;
+    }
+
+    /* === Hover lift === */
+    .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+
+    /* === Shimmer animation === */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer {
+      background: linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.12) 50%, transparent 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2.5s infinite;
+    }
+
+    /* === Pulse dot === */
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .pulse-dot { animation: pulseDot 1.5s ease-in-out infinite; }
+
+    /* === Hero gradient text animation === */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animated-gradient {
+      background: linear-gradient(270deg, #818CF8, #a78bfa, #c084fc, #f97316, #a78bfa, #818CF8);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    /* === Floating animation === */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .float { animation: float 5s ease-in-out infinite; }
+
+    /* === Section divider === */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #2A2A3F 20%, #3A3A55 50%, #2A2A3F 80%, transparent);
+    }
+
+    /* === Feature card === */
+    .feature-card {
+      background: #0E0E16;
+      border: 1px solid #242432;
+      border-radius: 20px;
+      padding: 32px;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    }
+    .feature-card:hover {
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: 0 0 30px rgba(99,102,241,0.08), 0 8px 40px rgba(0,0,0,0.4);
+      transform: translateY(-3px);
+    }
+
+    /* === Button styles === */
+    .btn-primary {
+      background: linear-gradient(135deg, #6366F1, #8B5CF6);
+      color: white;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 6px 28px rgba(99,102,241,0.4);
+    }
+    .btn-primary:active { transform: scale(0.99); }
+
+    .btn-secondary {
+      border: 1px solid #2A2A3F;
+      background: rgba(17,17,24,0.6);
+      color: #D4D4E4;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(99,102,241,0.5);
+      color: white;
+      background: rgba(99,102,241,0.06);
+    }
+
+    /* === Stat pill === */
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      color: #818CF8;
+    }
+
+    /* === WhatsApp phone frame === */
+    .phone-frame {
+      border-radius: 40px;
+      border: 8px solid #1A1A28;
+      background: #0A0A0F;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(99,102,241,0.15), 0 30px 80px rgba(0,0,0,0.6);
+    }
+
+    /* === FAQ hover highlight === */
+    .faq-item {
+      border: 1px solid #1E1E2E;
+      border-radius: 18px;
+      background: rgba(14,14,22,0.6);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+    }
+    .faq-item:hover { border-color: rgba(99,102,241,0.3); }
+
+    /* === Pricing card highlight === */
+    .pricing-card-featured {
+      border: 1px solid rgba(99,102,241,0.6);
+      background: linear-gradient(160deg, rgba(99,102,241,0.08) 0%, rgba(139,92,246,0.04) 100%);
+      box-shadow: 0 0 50px rgba(99,102,241,0.12), 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    /* === CFO visualizer panel === */
+    .visualizer-panel {
+      background: #0D0D16;
+      border: 1px solid #1E1E30;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(99,102,241,0.06), 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    /* === Progress bar animation === */
+    .progress-fill {
+      height: 100%;
+      border-radius: 100px;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* === Smooth reveal === */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s ease forwards; }
+  </style>
 </head>
 <body class="min-h-screen overflow-x-hidden relative">
-  <!-- Background Ambient Glows -->
-  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6366F1]/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
-  <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-[#8B5CF6]/5 rounded-full blur-[130px] -z-10 pointer-events-none"></div>
 
-  <!-- Header Nav -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-[#2A2A35]/50 bg-[#0A0A0F]/80 backdrop-blur-xl">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center shadow-lg shadow-indigo-900/20">
-          <i data-lucide="zap" class="w-4.5 h-4.5 text-white"></i>
+  <!-- Background Ambient Glows -->
+  <div class="fixed top-0 left-1/4 w-[700px] h-[700px] bg-[#6366F1]/8 rounded-full blur-[180px] -z-10 pointer-events-none opacity-60"></div>
+  <div class="fixed top-[60vh] right-1/5 w-[500px] h-[500px] bg-[#8B5CF6]/6 rounded-full blur-[150px] -z-10 pointer-events-none opacity-40"></div>
+  <div class="fixed bottom-0 left-1/3 w-[400px] h-[400px] bg-indigo-900/10 rounded-full blur-[120px] -z-10 pointer-events-none opacity-30"></div>
+
+  <!-- ======================================== -->
+  <!-- Header Navigation -->
+  <!-- ======================================== -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5" style="background: rgba(6,6,11,0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 flex-shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center shadow-lg shadow-indigo-950/40">
+          <i data-lucide="zap" class="w-4 h-4 text-white"></i>
         </div>
-        <span class="font-bold text-xl tracking-tight text-white font-heading">Docxter <span class="text-xs bg-[#6366F1]/20 text-[#818CF8] font-bold px-2.5 py-0.5 rounded border border-[#6366F1]/30 ml-1">vCFO</span></span>
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-lg tracking-tight text-white font-heading">Docxter</span>
+          <span class="text-[10px] bg-[#6366F1]/15 text-[#818CF8] font-bold px-2 py-0.5 rounded-md border border-[#6366F1]/25 tracking-wide">vCFO</span>
+        </div>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm text-[#8B8B9E] font-medium">
-        <a href="#demo" class="hover:text-white transition-colors">Live WhatsApp Demo</a>
-        <a href="#features" class="hover:text-white transition-colors">Audit Pipelines</a>
-        <a href="#pricing" class="hover:text-white transition-colors">Pricing Structure</a>
-        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-        <a href="http://localhost:3001/login" class="hover:text-white transition-colors">Portal Login</a>
+
+      <!-- Nav Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-[13px] text-[#8B8B9E] font-medium">
+        <a href="#demo" class="hover:text-white transition-colors duration-200 hover:text-[#C4C4D4]">Live Demo</a>
+        <a href="#features" class="hover:text-white transition-colors duration-200 hover:text-[#C4C4D4]">Features</a>
+        <a href="#pricing" class="hover:text-white transition-colors duration-200 hover:text-[#C4C4D4]">Pricing</a>
+        <a href="#faq" class="hover:text-white transition-colors duration-200 hover:text-[#C4C4D4]">FAQ</a>
       </nav>
-      <div class="flex items-center gap-4">
-        <a href="http://localhost:3001/login" class="hidden sm:inline-block text-xs font-bold text-[#8B8B9E] hover:text-white transition-colors">
+
+      <!-- CTA -->
+      <div class="flex items-center gap-3">
+        <a href="http://localhost:3001/login" class="hidden md:inline-block text-[13px] font-semibold text-[#8B8B9E] hover:text-white transition-colors px-3 py-1.5">
           Sign In
         </a>
-        <a href="http://localhost:3001/signup" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-indigo-950/50 hover:scale-105">
-          Pair Your WhatsApp <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        <a href="http://localhost:3001/signup" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5254D0] hover:to-[#7B4FCC] text-white font-bold text-[12px] px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-indigo-950/40 hover:shadow-indigo-900/50 hover:scale-[1.03]">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Pair WhatsApp
         </a>
       </div>
     </div>
   </header>
 
+  <!-- ======================================== -->
   <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6 relative">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 text-[#818CF8] text-xs font-semibold mb-8">
-        <i data-lucide="sparkles" class="w-3 h-3 animate-pulse"></i>
-        WhatsApp-First B2B Cash-Recovery Assistant
+  <!-- ======================================== -->
+  <section class="pt-36 pb-24 px-6 relative overflow-hidden">
+
+    <!-- Subtle grid pattern -->
+    <div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: linear-gradient(#6366F1 1px, transparent 1px), linear-gradient(90deg, #6366F1 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative">
+
+      <!-- Eyebrow badge -->
+      <div class="inline-flex items-center gap-2 section-badge mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#818CF8] pulse-dot"></span>
+        WhatsApp-First B2B vCFO · Now Live
       </div>
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6 text-white font-heading">
-        Tally-Compatible
-        <br />
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#818CF8] via-[#a78bfa] to-orange-400">WhatsApp vCFO for Small Businesses.</span>
+
+      <!-- Headline -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-7 text-white font-heading">
+        Your AI-Powered vCFO
+        <br class="hidden md:block" />
+        <span class="animated-gradient">Runs Through WhatsApp.</span>
       </h1>
-      <p class="text-lg md:text-xl text-brand-textGray max-w-2xl mx-auto leading-relaxed mb-10">
-        Stop losing money on missing Input Tax Credits (ITC), overdue debts, and stagnant warehouse inventory. Just forward Tally backups or invoice PDFs to WhatsApp for instant verified financial audits.
+
+      <!-- Subtitle -->
+      <p class="text-[17px] md:text-lg text-[#9090A4] max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+        Stop losing money on missing Input Tax Credits, overdue debts, and stagnant inventory. Just forward your Tally backup or invoice PDFs to WhatsApp — get instant, verified financial audits.
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="http://localhost:3001/signup" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-sm px-7 py-4 rounded-xl transition-all shadow-xl shadow-indigo-950/50 hover:scale-105">
-          Pair Your WhatsApp Free <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="http://localhost:3001/signup" class="btn-primary">
+          Pair Your WhatsApp Free
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
-        <a href="#demo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-brand-border bg-brand-card/50 hover:border-[#6366F1]/50 text-[#F4F4F8] hover:text-white font-semibold text-sm px-7 py-4 rounded-xl transition-all">
-          Test Live Simulator <i data-lucide="play" class="w-4 h-4"></i>
+        <a href="#demo" class="btn-secondary">
+          <i data-lucide="play" class="w-4 h-4 text-[#818CF8]"></i>
+          Watch Live Demo
         </a>
       </div>
-      <p class="text-xs text-brand-textGray/60 mt-6 flex items-center justify-center gap-2">
-        <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> Tally Prime Approved · Real-Time WhatsApp Webhook Sync · VSS Audited
-      </p>
+
+      <!-- Trust bar -->
+      <div class="flex flex-wrap items-center justify-center gap-5 text-[12px] text-[#5A5A72] font-medium">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-green-500"></i>
+          Tally Prime Compatible
+        </span>
+        <span class="w-1 h-1 rounded-full bg-[#3A3A52]"></span>
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-[#818CF8]"></i>
+          Real-Time WhatsApp Webhook
+        </span>
+        <span class="w-1 h-1 rounded-full bg-[#3A3A52]"></span>
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="lock" class="w-3.5 h-3.5 text-[#818CF8]"></i>
+          100% Offline Gemma 4 Option
+        </span>
+        <span class="w-1 h-1 rounded-full bg-[#3A3A52]"></span>
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-green-500"></i>
+          VSS Verified Audits
+        </span>
+      </div>
+
+      <!-- Quick stats row -->
+      <div class="mt-14 pt-10 border-t border-white/5 grid grid-cols-3 gap-4 max-w-lg mx-auto text-center">
+        <div>
+          <div class="text-2xl font-extrabold text-white font-heading">₹84K+</div>
+          <div class="text-[11px] text-[#5A5A72] font-medium mt-1">ITC Recovered / Audit</div>
+        </div>
+        <div class="border-x border-white/5">
+          <div class="text-2xl font-extrabold text-white font-heading">1.2s</div>
+          <div class="text-[11px] text-[#5A5A72] font-medium mt-1">Avg. Local Gemma Scan</div>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold text-white font-heading">2.5%</div>
+          <div class="text-[11px] text-[#5A5A72] font-medium mt-1">Shared Savings Only</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Interactive Sandbox Demo Simulator -->
-  <section id="demo" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/20 relative">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading">Interactive WhatsApp-First vCFO Simulator</h2>
-        <p class="text-brand-textGray mt-3">Simulate how Docxter processes raw business datasets via WhatsApp to generate instant cost-savings and cash-recovery advisories.</p>
+  <!-- ======================================== -->
+  <!-- Live WhatsApp Simulator Section -->
+  <!-- ======================================== -->
+  <section id="demo" class="py-24 px-6 relative" style="background: linear-gradient(180deg, #06060B 0%, #09090E 50%, #06060B 100%);">
+    <div class="section-divider mb-0 absolute top-0 left-0 right-0"></div>
+
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <div class="section-badge mb-5">
+          <i data-lucide="activity" class="w-3 h-3"></i>
+          Interactive Live Demo
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading mb-4 leading-tight">
+          WhatsApp-First vCFO Simulator
+        </h2>
+        <p class="text-[15px] text-[#8B8B9E] max-w-2xl mx-auto leading-relaxed">
+          Simulate exactly how Docxter processes raw business data forwarded via WhatsApp — triggering live debt audits, GST reconciliations, and cash flow insights.
+        </p>
       </div>
 
-      <!-- Simulator Board: Side-by-Side Phone & CFO Visualizer Layout -->
-      <div class="flex flex-col lg:flex-row items-center gap-8 justify-center w-full max-w-5xl mx-auto">
-        
-        <!-- Column 1: WhatsApp Simulator Frame -->
-        <div class="w-full max-w-[310px] rounded-[36px] border-8 border-[#2A2A35] bg-[#0A0A0F] overflow-hidden shadow-[0_0_60px_rgba(99,102,241,0.15)] relative flex-shrink-0">
-          <!-- Phone Header Indicator -->
-          <div class="h-6 bg-[#16161F] flex items-center justify-between px-6 text-[10px] text-[#4A4A5A] font-bold">
-            <span>9:41</span>
-            <div class="w-16 h-4 rounded-full bg-black/60 mx-auto absolute left-1/2 -translate-x-1/2 top-1" />
-            <div class="flex gap-1 items-center">
-              <span>📶</span>
-              <span>🔋</span>
-            </div>
+      <!-- Dual-Pane Simulator Grid -->
+      <div class="flex flex-col lg:flex-row items-stretch gap-6 justify-center max-w-5xl mx-auto">
+
+        <!-- Column 1: WhatsApp Phone Mockup -->
+        <div class="flex flex-col items-center gap-4 flex-shrink-0">
+
+          <!-- Phone header label -->
+          <div class="flex items-center gap-2 text-[11px] text-[#5A5A72] font-bold uppercase tracking-wider">
+            <i data-lucide="smartphone" class="w-3 h-3"></i>
+            WhatsApp Chat
           </div>
 
-          <!-- Twilio WhatsApp Contact bar -->
-          <div class="flex items-center gap-3 px-4 py-3 bg-[#1E1E28] border-b border-[#2A2A35]">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#128C7E] to-[#25D366] flex items-center justify-center shadow">
-              <i data-lucide="zap" class="w-4 h-4 text-white"></i>
-            </div>
-            <div>
-              <h4 class="text-xs font-bold text-[#F4F4F8]">Docxter vCFO</h4>
-              <p class="text-[9px] text-green-400 flex items-center gap-1 font-semibold">
-                <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-ping"></span> Online Assistant
-              </p>
-            </div>
-          </div>
+          <!-- Phone frame -->
+          <div class="w-full max-w-[290px] phone-frame relative">
 
-          <!-- Chat Content Window -->
-          <div class="h-80 p-4 bg-[#0D0D15] flex flex-col justify-end">
-            <div class="overflow-y-auto pr-1 space-y-3 flex-1 flex flex-col justify-end" id="whatsapp-chat-container">
-              <!-- Initial Greeting message will be inserted dynamically by JS -->
+            <!-- Notch bar -->
+            <div class="h-7 bg-[#12121A] flex items-center justify-between px-5 text-[10px] text-[#3A3A52] font-bold relative">
+              <span>9:41</span>
+              <div class="w-14 h-3.5 rounded-full bg-black/80 absolute left-1/2 -translate-x-1/2 top-1.5"></div>
+              <div class="flex gap-1 items-center text-[9px]">
+                <span>📶</span>
+                <span>🔋</span>
+              </div>
             </div>
-            
-            <!-- Typing Indicator -->
-            <div class="hidden justify-start mt-2" id="whatsapp-typing-indicator">
-              <div class="bg-[#1E1E28] border border-[#2A2A35] rounded-2xl rounded-tl-sm px-3.5 py-2 text-[9.5px] text-[#8B8B9E] font-medium flex items-center gap-2">
-                <i data-lucide="refresh-cw" class="w-3 h-3 animate-spin text-[#6366F1]"></i> Docxter is auditing ledger...
+
+            <!-- Contact bar -->
+            <div class="flex items-center gap-3 px-4 py-3 bg-[#1A1A26] border-b border-[#1E1E2E]">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#128C7E] to-[#25D366] flex items-center justify-center shadow-md flex-shrink-0">
+                <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="text-[12px] font-bold text-white leading-tight">Docxter vCFO</h4>
+                <p class="text-[10px] text-green-400 flex items-center gap-1 font-semibold mt-0.5">
+                  <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-ping"></span>
+                  Online · AI Active
+                </p>
+              </div>
+              <i data-lucide="more-vertical" class="w-4 h-4 text-[#5A5A72]"></i>
+            </div>
+
+            <!-- Chat window -->
+            <div class="h-[340px] px-4 pb-4 pt-3 bg-[#0D0D16] flex flex-col gap-3 overflow-y-auto" id="whatsapp-chat-container">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Typing indicator -->
+            <div class="hidden px-4 pb-2 bg-[#0D0D16]" id="whatsapp-typing-indicator" style="display:none;">
+              <div class="bg-[#1A1A26] border border-[#2A2A35] rounded-2xl rounded-tl-sm px-3.5 py-2 text-[10px] text-[#8B8B9E] font-medium flex items-center gap-2 w-fit">
+                <i data-lucide="refresh-cw" class="w-3 h-3 animate-spin text-[#6366F1]"></i>
+                Docxter is auditing ledger...
+              </div>
+            </div>
+
+            <!-- Quick trigger buttons -->
+            <div class="border-t border-[#1E1E2E] p-3 bg-[#12121A] space-y-2">
+              <p class="text-[9px] text-[#3A3A52] font-extrabold uppercase tracking-wider">Quick audit triggers:</p>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button onclick="triggerShowcaseSimulation('debt')" id="btn-trigger-debt"
+                  class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#6366F1]/20 border-[#6366F1] text-[#818CF8]">
+                  💰 Debt Audit
+                </button>
+                <button onclick="triggerShowcaseSimulation('gst')" id="btn-trigger-gst"
+                  class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A10] border-[#242432] text-[#6A6A82] hover:border-[#3A3A52] hover:text-[#8B8B9E]">
+                  🔍 GST Mismatch
+                </button>
+                <button onclick="triggerShowcaseSimulation('stock')" id="btn-trigger-stock"
+                  class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A10] border-[#242432] text-[#6A6A82] hover:border-[#3A3A52] hover:text-[#8B8B9E]">
+                  📦 Dead Stock
+                </button>
+                <button onclick="triggerShowcaseSimulation('tally')" id="btn-trigger-tally"
+                  class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A10] border-[#242432] text-[#6A6A82] hover:border-[#3A3A52] hover:text-[#8B8B9E]">
+                  📎 Tally Sync
+                </button>
               </div>
             </div>
           </div>
-
-          <!-- Pre-defined prompt triggers overlay -->
-          <div class="border-t border-[#2A2A35] p-3 bg-[#16161F] space-y-1.5">
-            <p class="text-[9px] text-[#5A5A72] font-extrabold uppercase tracking-wider mb-1">Click to test queries:</p>
-            <div class="flex flex-wrap gap-1.5">
-              <button
-                onclick="triggerShowcaseSimulation('debt')"
-                id="btn-trigger-debt"
-                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#6366F1]/20 border-[#6366F1] text-[#818CF8]"
-              >
-                💰 Debt audit
-              </button>
-              <button
-                onclick="triggerShowcaseSimulation('gst')"
-                id="btn-trigger-gst"
-                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
-              >
-                🔍 GST mismatch
-              </button>
-              <button
-                onclick="triggerShowcaseSimulation('stock')"
-                id="btn-trigger-stock"
-                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
-              >
-                📦 Dead stock
-              </button>
-              <button
-                onclick="triggerShowcaseSimulation('tally')"
-                id="btn-trigger-tally"
-                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
-              >
-                📎 XML Sync
-              </button>
-            </div>
-          </div>
         </div>
 
-        <!-- Column 2: Live CFO Audit Visualizer Screen Panel -->
-        <div class="flex flex-col flex-1 min-w-[280px] max-w-[340px] rounded-[28px] border border-[#2A2A35]/80 bg-[#111118]/90 backdrop-blur-md p-5 shadow-[0_0_40px_rgba(99,102,241,0.05)] relative overflow-hidden h-[460px]" id="cfo-visualizer-container">
-          <!-- Handled dynamically by JS inside the bottom scripts -->
+        <!-- Column 2: CFO Visualizer Panel -->
+        <div class="flex flex-col items-center gap-4 flex-1 min-w-0">
+
+          <!-- Panel label -->
+          <div class="flex items-center gap-2 text-[11px] text-[#5A5A72] font-bold uppercase tracking-wider">
+            <i data-lucide="bar-chart-2" class="w-3 h-3"></i>
+            CFO Audit Visualizer
+          </div>
+
+          <!-- Visualizer container -->
+          <div class="w-full visualizer-panel p-6 min-h-[500px] flex flex-col" id="cfo-visualizer-container">
+            <!-- Populated dynamically by JS -->
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- ======================================== -->
   <!-- Interactive How to Use Section -->
-  <section id="how-to-use" class="py-20 px-6 border-t border-brand-border/40 bg-[#07070B] relative">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">💡 How to Use Docxter?</h2>
-        <p class="text-brand-textGray mt-3 text-lg font-heading">Follow three simple steps to start auditing your business ledgers via WhatsApp.</p>
+  <!-- ======================================== -->
+  <section id="how-to-use" class="py-24 px-6 relative bg-[#06060B]">
+    <div class="section-divider absolute top-0 left-0 right-0"></div>
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-20">
+        <div class="section-badge mb-5">
+          <i data-lucide="list-checks" class="w-3 h-3"></i>
+          Three Simple Steps
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading mb-4 leading-tight">How to Use Docxter</h2>
+        <p class="text-[15px] text-[#8B8B9E] max-w-xl mx-auto leading-relaxed">Start recovering hidden profits and ITC credits from your business ledgers in minutes — no app install required.</p>
       </div>
 
-      <!-- Three Steps Interactive Navigation Tabs -->
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <button onclick="setHowToUseStep(1)" id="step-tab-1" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-[#6366F1]/10 border-2 border-[#6366F1] rounded-2xl transition-all hover:scale-[1.02]">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-[#6366F1] border border-[#6366F1] flex items-center justify-center font-bold text-white font-heading shadow-md shadow-indigo-950">1</div>
-          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="message-square" class="w-5 h-5 text-[#818CF8]"></i>
+      <!-- Three Steps Tabs -->
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+        <!-- Step 1 -->
+        <button onclick="setHowToUseStep(1)" id="step-tab-1"
+          class="w-full text-left relative flex flex-col items-center text-center pt-10 pb-7 px-6 bg-[#6366F1]/8 border-2 border-[#6366F1] rounded-3xl transition-all hover:scale-[1.02] hover:bg-[#6366F1]/12 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]">
+          <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#6366F1] flex items-center justify-center font-bold text-white font-heading shadow-lg shadow-indigo-950">1</div>
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/15 border border-[#6366F1]/30 flex items-center justify-center mb-5">
+            <i data-lucide="message-square" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Pair WhatsApp</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Scan the onboarding QR code or send 'Hello' to our official Twilio vCFO number to establish secure workspace link.</p>
+          <h3 class="text-lg font-bold text-white mb-2.5 font-heading">Pair WhatsApp</h3>
+          <p class="text-[13px] text-[#8B8B9E] leading-relaxed">Scan the onboarding QR code or send <span class="text-[#818CF8] font-semibold">'Hello'</span> to our Twilio vCFO number to establish your secure workspace.</p>
         </button>
 
-        <button onclick="setHowToUseStep(2)" id="step-tab-2" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">2</div>
-          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="file-up" class="w-5 h-5 text-[#818CF8]"></i>
+        <!-- Step 2 -->
+        <button onclick="setHowToUseStep(2)" id="step-tab-2"
+          class="w-full text-left relative flex flex-col items-center text-center pt-10 pb-7 px-6 bg-[#111118]/60 border-2 border-[#1E1E2E] rounded-3xl transition-all hover:scale-[1.02] hover:border-[#3A3A52]">
+          <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#111118] border border-[#2A2A3A] flex items-center justify-center font-bold text-[#6A6A82] font-heading">2</div>
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-5">
+            <i data-lucide="file-up" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Forward Ledgers</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Forward raw Tally XML backups, transaction PDFs, GSTR reports, or balance sheet CSVs directly in the WhatsApp chat window.</p>
+          <h3 class="text-lg font-bold text-white mb-2.5 font-heading">Forward Ledgers</h3>
+          <p class="text-[13px] text-[#8B8B9E] leading-relaxed">Forward raw Tally XML backups, transaction PDFs, GSTR reports, or balance sheet CSVs directly in the WhatsApp chat window.</p>
         </button>
 
-        <button onclick="setHowToUseStep(3)" id="step-tab-3" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">3</div>
-          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="trending-up" class="w-5 h-5 text-[#818CF8]"></i>
+        <!-- Step 3 -->
+        <button onclick="setHowToUseStep(3)" id="step-tab-3"
+          class="w-full text-left relative flex flex-col items-center text-center pt-10 pb-7 px-6 bg-[#111118]/60 border-2 border-[#1E1E2E] rounded-3xl transition-all hover:scale-[1.02] hover:border-[#3A3A52]">
+          <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#111118] border border-[#2A2A3A] flex items-center justify-center font-bold text-[#6A6A82] font-heading">3</div>
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-5">
+            <i data-lucide="trending-up" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Get CFO Reports</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Get instant analysis. Ask conversational audits (debt tracking, GSTR mismatch alert) and receive recovery proposals immediately.</p>
+          <h3 class="text-lg font-bold text-white mb-2.5 font-heading">Get CFO Reports</h3>
+          <p class="text-[13px] text-[#8B8B9E] leading-relaxed">Get instant analysis: debt tracking, GSTR mismatch alerts, and cash-recovery proposals — delivered as readable WhatsApp replies.</p>
         </button>
+
       </div>
 
       <!-- Live Simulator Preview Window -->
@@ -463,55 +814,119 @@
   </section>
 
   <!-- Key SaaS Features Grid -->
-  <section id="features" class="py-24 px-6 border-t border-brand-border/40 relative">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">Complete Zero-Maintenance Feature Set</h2>
-        <p class="text-brand-textGray mt-3 text-lg">Designed for maximum cashflow and absolute privacy.</p>
+  <section id="features" class="py-24 px-6 relative" style="background: linear-gradient(180deg, #06060B 0%, #09090E 60%, #06060B 100%)">
+    <div class="section-divider absolute top-0 left-0 right-0"></div>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <div class="section-badge mb-5">
+          <i data-lucide="layers" class="w-3 h-3"></i>
+          Platform Capabilities
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading mb-4 leading-tight">Complete Zero-Maintenance Feature Set</h2>
+        <p class="text-[15px] text-[#8B8B9E] max-w-xl mx-auto leading-relaxed">Designed for maximum cashflow recovery and absolute ledger privacy — from ₹5L MSMEs to £5M UK SMBs.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="message-square" class="w-5 h-5 text-[#818CF8]"></i>
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="message-square" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">WhatsApp-First Ingest</h3>
-          <p class="text-sm text-brand-textGray leading-relaxed">No custom app installs needed. Simply forward transaction backups, PDFs, and invoices to our WhatsApp chatbot to trigger automatic audits.</p>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">WhatsApp-First Ingest</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">No custom app installs needed. Simply forward transaction backups, PDFs, and invoices to our WhatsApp chatbot to trigger automatic audits.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Twilio Webhook</span>
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">PDF/CSV/XML</span>
+          </div>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="calculator" class="w-5 h-5 text-[#818CF8]"></i>
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="calculator" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">Smart vCFO Synthesis</h3>
-          <p class="text-sm text-brand-textGray leading-relaxed">Autodetects historic vendor rate overbillings, seasonal liquidity crunches, deadwood inventory items, and Input Tax Credit claims automatically.</p>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">Smart vCFO Synthesis</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">Autodetects historic vendor rate overbillings, seasonal liquidity crunches, deadwood inventory items, and Input Tax Credit claims automatically.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">GST Reconciliation</span>
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Debt Radar</span>
+          </div>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="refresh-cw" class="w-5 h-5 text-[#818CF8]"></i>
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="shield" class="w-6 h-6 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">Online/Offline Hybrid</h3>
-          <p class="text-sm text-brand-textGray leading-relaxed">Toggle to cloud Gemini with 1-click for zero-maintenance and zero API usage billing. Uses cookie persistence for effortless workspaces.</p>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">100% Air-Gapped Privacy</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">Run Gemma 4 locally via Ollama — your invoices, vendor data, and balance sheets never leave your office hardware. Zero cloud exposure.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">Offline Gemma 4</span>
+            <span class="text-[10px] font-semibold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">GDPR Compliant</span>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="trending-up" class="w-6 h-6 text-[#818CF8]"></i>
+          </div>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">Tally XML Sync</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">Native Tally Prime XML parser that ingests ledger exports, vouchers, and stock journals instantly — zero manual data entry required.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Tally Prime</span>
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Auto-parse</span>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="refresh-cw" class="w-6 h-6 text-[#818CF8]"></i>
+          </div>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">Online/Offline Hybrid</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">Toggle between cloud Gemini for speed or local Gemma 4 for privacy — workspace sessions persist with cookie-based state management.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Cloud Gemini</span>
+            <span class="text-[10px] font-semibold text-[#818CF8] bg-[#6366F1]/10 px-2.5 py-1 rounded-full border border-[#6366F1]/20">Local Gemma 4</span>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="w-14 h-14 rounded-2xl bg-[#6366F1]/12 border border-[#6366F1]/25 flex items-center justify-center mb-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <i data-lucide="indian-rupee" class="w-6 h-6 text-[#818CF8]"></i>
+          </div>
+          <h3 class="text-[18px] font-bold mb-3 text-white font-heading">Performance-Only Billing</h3>
+          <p class="text-[14px] text-[#8B8B9E] leading-relaxed">Pay 2.5% only on verified, recovered savings beyond ₹10,000 / £100. First ₹10K free. If we find nothing, you pay nothing extra.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="text-[10px] font-semibold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">Results-Based</span>
+            <span class="text-[10px] font-semibold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">Zero Risk</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Interactive Global Pricing Switcher -->
-  <section id="pricing" class="py-24 px-6 border-t border-brand-border/40 bg-brand-card/20 relative">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">Simple, Performance-Based Pricing</h2>
-        <p class="text-brand-textGray mt-4">Start free. Upgrade to DCLI to discover hidden profit leaks in your ledgers.</p>
+  <section id="pricing" class="py-24 px-6 relative" style="background: linear-gradient(180deg, #06060B 0%, #0A0A14 100%)">
+    <div class="section-divider absolute top-0 left-0 right-0"></div>
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <div class="section-badge mb-5">
+          <i data-lucide="credit-card" class="w-3 h-3"></i>
+          Transparent Pricing
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading mb-4 leading-tight">Simple, Performance-Based Pricing</h2>
+        <p class="text-[15px] text-[#8B8B9E] max-w-lg mx-auto leading-relaxed">Start free. Upgrade to DCLI to uncover hidden profit leaks — you only pay when we save you money.</p>
         
         <!-- Pricing Toggle -->
-        <div class="flex justify-center mt-8">
-          <div class="inline-flex bg-[#111118] border border-[#2A2A35] rounded-xl p-1 gap-1 shadow-lg shadow-black/30">
+        <div class="flex justify-center mt-10">
+          <div class="inline-flex bg-[#0D0D16] border border-[#1E1E2E] rounded-xl p-1 gap-1 shadow-lg shadow-black/40">
             <button
               onclick="togglePricingMarket('IN')"
               id="pricing-btn-in"
-              class="px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30"
+              class="px-5 py-2.5 rounded-lg text-[12px] font-bold transition-all flex items-center gap-2 bg-[#6366F1] text-white shadow shadow-indigo-900/30"
             >
               <span>🇮🇳</span> India (INR)
             </button>
