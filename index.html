@@ -58,23 +58,22 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="min-h-screen overflow-x-hidden relative">
-
   <!-- Background Ambient Glows -->
-  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
-  <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[130px] -z-10 pointer-events-none"></div>
+  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6366F1]/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+  <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-[#8B5CF6]/5 rounded-full blur-[130px] -z-10 pointer-events-none"></div>
 
   <!-- Header Nav -->
   <header class="fixed top-0 inset-x-0 z-50 border-b border-[#2A2A35]/50 bg-[#0A0A0F]/80 backdrop-blur-xl">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-900/20">
-          <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center shadow-lg shadow-indigo-900/20">
+          <i data-lucide="zap" class="w-4.5 h-4.5 text-white"></i>
         </div>
-        <span class="font-bold text-xl tracking-tight text-white font-heading">Docxter <span class="text-xs bg-amber-500/20 text-amber-400 font-bold px-2 py-0.5 rounded-full border border-amber-500/30 ml-1">vCFO Portfolio</span></span>
+        <span class="font-bold text-xl tracking-tight text-white font-heading">Docxter <span class="text-xs bg-[#6366F1]/20 text-[#818CF8] font-bold px-2.5 py-0.5 rounded border border-[#6366F1]/30 ml-1">vCFO</span></span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-[#8B8B9E] font-medium">
-        <a href="#demo" class="hover:text-white transition-colors">Interactive Demo</a>
-        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#demo" class="hover:text-white transition-colors">Live WhatsApp Demo</a>
+        <a href="#features" class="hover:text-white transition-colors">Audit Pipelines</a>
         <a href="#pricing" class="hover:text-white transition-colors">Pricing Structure</a>
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="http://localhost:3001/login" class="hover:text-white transition-colors">Portal Login</a>
@@ -83,8 +82,8 @@
         <a href="http://localhost:3001/login" class="hidden sm:inline-block text-xs font-bold text-[#8B8B9E] hover:text-white transition-colors">
           Sign In
         </a>
-        <a href="http://localhost:3001/signup" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-amber-950/50 hover:scale-105">
-          Try Live Sandbox <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        <a href="http://localhost:3001/signup" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md shadow-indigo-950/50 hover:scale-105">
+          Pair Your WhatsApp <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
@@ -93,196 +92,123 @@
   <!-- Hero Section -->
   <section class="pt-32 pb-20 px-6 relative">
     <div class="max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-semibold mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 text-[#818CF8] text-xs font-semibold mb-8">
         <i data-lucide="sparkles" class="w-3 h-3 animate-pulse"></i>
-        Privacy-First Local AI for Small Businesses
+        WhatsApp-First B2B Cash-Recovery Assistant
       </div>
       <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6 text-white font-heading">
-        Analyze Ledgers & Growth Trends
+        Tally-Compatible
         <br />
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">with 100% Secure Local AI.</span>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#818CF8] via-[#a78bfa] to-orange-400">WhatsApp vCFO for Small Businesses.</span>
       </h1>
       <p class="text-lg md:text-xl text-brand-textGray max-w-2xl mx-auto leading-relaxed mb-10">
-        The ultimate zero-maintenance vCFO co-pilot. Upload Tally ledgers, contracts, or sales statements. Docxter recovers tax leaks, benchmarks pricing anomalies, and forecasts high-margin seasonal growth.
+        Stop losing money on missing Input Tax Credits (ITC), overdue debts, and stagnant warehouse inventory. Just forward Tally backups or invoice PDFs to WhatsApp for instant verified financial audits.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#demo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-sm px-7 py-4 rounded-xl transition-all shadow-xl shadow-amber-950/50 hover:scale-105">
-          Scan Sample Tally Sheet <i data-lucide="play" class="w-4 h-4"></i>
+        <a href="http://localhost:3001/signup" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-sm px-7 py-4 rounded-xl transition-all shadow-xl shadow-indigo-950/50 hover:scale-105">
+          Pair Your WhatsApp Free <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
-        <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-brand-border bg-brand-card/50 hover:border-amber-500/50 text-[#F4F4F8] hover:text-white font-semibold text-sm px-7 py-4 rounded-xl transition-all">
-          Explore Features <i data-lucide="chevron-down" class="w-4 h-4"></i>
+        <a href="#demo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-brand-border bg-brand-card/50 hover:border-[#6366F1]/50 text-[#F4F4F8] hover:text-white font-semibold text-sm px-7 py-4 rounded-xl transition-all">
+          Test Live Simulator <i data-lucide="play" class="w-4 h-4"></i>
         </a>
       </div>
       <p class="text-xs text-brand-textGray/60 mt-6 flex items-center justify-center gap-2">
-        <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> No Database Uploads Required · Powered by Local Google Gemma 4
+        <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> Tally Prime Approved · Real-Time WhatsApp Webhook Sync · VSS Audited
       </p>
     </div>
   </section>
 
   <!-- Interactive Sandbox Demo Simulator -->
   <section id="demo" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/20 relative">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading">Interactive vCFO Analytics & Audit Sandbox</h2>
-        <p class="text-brand-textGray mt-3">Simulate how Docxter processes raw business datasets locally to generate cost-savings and seasonal growth advisories.</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading">Interactive WhatsApp-First vCFO Simulator</h2>
+        <p class="text-brand-textGray mt-3">Simulate how Docxter processes raw business datasets via WhatsApp to generate instant cost-savings and cash-recovery advisories.</p>
       </div>
 
-      <!-- Simulator Board -->
-      <div class="rounded-2xl border border-brand-border bg-[#0D0D14] overflow-hidden shadow-2xl shadow-black/80">
-        <!-- Window Controls -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-3.5 border-b border-brand-border bg-[#14141E]">
-          <div class="flex items-center gap-2">
-            <span class="w-3.5 h-3.5 rounded-full bg-red-500/70"></span>
-            <span class="w-3.5 h-3.5 rounded-full bg-yellow-500/70"></span>
-            <span class="w-3.5 h-3.5 rounded-full bg-green-500/70"></span>
-            <span class="text-xs text-brand-textGray font-mono ml-3 flex items-center gap-1.5 bg-[#0A0A0F] border border-brand-border px-2.5 py-1 rounded-md">
-              <i data-lucide="terminal" class="w-3 h-3 text-amber-500"></i> dcli_synthesizer.bin
-            </span>
+      <!-- Simulator Board: Side-by-Side Phone & CFO Visualizer Layout -->
+      <div class="flex flex-col lg:flex-row items-center gap-8 justify-center w-full max-w-5xl mx-auto">
+        
+        <!-- Column 1: WhatsApp Simulator Frame -->
+        <div class="w-full max-w-[310px] rounded-[36px] border-8 border-[#2A2A35] bg-[#0A0A0F] overflow-hidden shadow-[0_0_60px_rgba(99,102,241,0.15)] relative flex-shrink-0">
+          <!-- Phone Header Indicator -->
+          <div class="h-6 bg-[#16161F] flex items-center justify-between px-6 text-[10px] text-[#4A4A5A] font-bold">
+            <span>9:41</span>
+            <div class="w-16 h-4 rounded-full bg-black/60 mx-auto absolute left-1/2 -translate-x-1/2 top-1" />
+            <div class="flex gap-1 items-center">
+              <span>📶</span>
+              <span>🔋</span>
+            </div>
           </div>
-          
-          <!-- Sandbox Toggle Mode -->
-          <div class="flex items-center gap-2 bg-[#0A0A0F] border border-brand-border rounded-lg p-0.5 self-start sm:self-auto">
-            <button
-              onclick="setSandboxMode('online')"
-              id="sb-online-btn"
-              class="px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white"
-            >
-              <i data-lucide="zap" class="w-3 h-3 text-yellow-400"></i> Cloud (Gemini)
-            </button>
-            <button
-              onclick="setSandboxMode('offline')"
-              id="sb-offline-btn"
-              class="px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-amber-600 text-white shadow shadow-amber-900/30"
-            >
-              <i data-lucide="shield" class="w-3 h-3 text-amber-400"></i> Local (Gemma 4)
-            </button>
-          </div>
-        </div>
 
-        <div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 min-h-[380px]">
-          <!-- Left Controller Panel -->
-          <div class="w-full md:w-1/3 flex flex-col justify-between border-b md:border-b-0 md:border-r border-brand-border/50 pb-6 md:pb-0 md:pr-6">
+          <!-- Twilio WhatsApp Contact bar -->
+          <div class="flex items-center gap-3 px-4 py-3 bg-[#1E1E28] border-b border-[#2A2A35]">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#128C7E] to-[#25D366] flex items-center justify-center shadow">
+              <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+            </div>
             <div>
-              <h3 class="text-lg font-bold text-white font-heading mb-2">Configure Ledger Ingestion</h3>
-              <p class="text-xs text-brand-textGray leading-relaxed mb-4">Select a mock database log to run a simulated vCFO audit directly inside your browser.</p>
-              
-              <div class="space-y-2">
-                <button onclick="startSimulation('Tally')" id="btn-tally" class="w-full text-left p-3 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/50 hover:bg-brand-card/80 transition-all flex items-center justify-between">
-                  <div class="flex items-center gap-2.5">
-                    <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
-                    <div>
-                      <h4 class="text-xs font-bold text-white">Tally Sales Ledger.csv</h4>
-                      <p class="text-[10px] text-brand-textGray">150 transactions · FY 25-26</p>
-                    </div>
-                  </div>
-                  <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray"></i>
-                </button>
+              <h4 class="text-xs font-bold text-[#F4F4F8]">Docxter vCFO</h4>
+              <p class="text-[9px] text-green-400 flex items-center gap-1 font-semibold">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-ping"></span> Online Assistant
+              </p>
+            </div>
+          </div>
 
-                <button onclick="startSimulation('GST')" id="btn-gst" class="w-full text-left p-3 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/50 hover:bg-brand-card/80 transition-all flex items-center justify-between">
-                  <div class="flex items-center gap-2.5">
-                    <i data-lucide="file-text" class="w-5 h-5 text-amber-500"></i>
-                    <div>
-                      <h4 class="text-xs font-bold text-white">GSTR-2B Mismatches.xlsx</h4>
-                      <p class="text-[10px] text-brand-textGray">84 invoices · Input Tax Claims</p>
-                    </div>
-                  </div>
-                  <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray"></i>
-                </button>
-
-                <button onclick="startSimulation('Analytics')" id="btn-analytics" class="w-full text-left p-3 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/50 hover:bg-brand-card/80 transition-all flex items-center justify-between">
-                  <div class="flex items-center gap-2.5">
-                    <i data-lucide="trending-up" class="w-5 h-5 text-indigo-400"></i>
-                    <div>
-                      <h4 class="text-xs font-bold text-white">Sales & Stock Forecast.csv</h4>
-                      <p class="text-[10px] text-brand-textGray">Inventory Logs · Seasonal Trends</p>
-                    </div>
-                  </div>
-                  <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray"></i>
-                </button>
+          <!-- Chat Content Window -->
+          <div class="h-80 p-4 bg-[#0D0D15] flex flex-col justify-end">
+            <div class="overflow-y-auto pr-1 space-y-3 flex-1 flex flex-col justify-end" id="whatsapp-chat-container">
+              <!-- Initial Greeting message will be inserted dynamically by JS -->
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div class="hidden justify-start mt-2" id="whatsapp-typing-indicator">
+              <div class="bg-[#1E1E28] border border-[#2A2A35] rounded-2xl rounded-tl-sm px-3.5 py-2 text-[9.5px] text-[#8B8B9E] font-medium flex items-center gap-2">
+                <i data-lucide="refresh-cw" class="w-3 h-3 animate-spin text-[#6366F1]"></i> Docxter is auditing ledger...
               </div>
             </div>
+          </div>
 
-            <div class="mt-6">
-              <button onclick="triggerCustomLeadModal()" class="w-full inline-flex items-center justify-center gap-2 border border-dashed border-amber-500/30 hover:border-amber-500/70 text-amber-400 font-bold text-xs p-3 rounded-xl transition-all">
-                <i data-lucide="mail" class="w-4 h-4"></i> Secure Full PDF Demo Audit
+          <!-- Pre-defined prompt triggers overlay -->
+          <div class="border-t border-[#2A2A35] p-3 bg-[#16161F] space-y-1.5">
+            <p class="text-[9px] text-[#5A5A72] font-extrabold uppercase tracking-wider mb-1">Click to test queries:</p>
+            <div class="flex flex-wrap gap-1.5">
+              <button
+                onclick="triggerShowcaseSimulation('debt')"
+                id="btn-trigger-debt"
+                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#6366F1]/20 border-[#6366F1] text-[#818CF8]"
+              >
+                💰 Debt audit
+              </button>
+              <button
+                onclick="triggerShowcaseSimulation('gst')"
+                id="btn-trigger-gst"
+                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
+              >
+                🔍 GST mismatch
+              </button>
+              <button
+                onclick="triggerShowcaseSimulation('stock')"
+                id="btn-trigger-stock"
+                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
+              >
+                📦 Dead stock
+              </button>
+              <button
+                onclick="triggerShowcaseSimulation('tally')"
+                id="btn-trigger-tally"
+                class="text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]"
+              >
+                📎 XML Sync
               </button>
             </div>
           </div>
-
-          <!-- Right Terminal Output -->
-          <div class="flex-1 flex flex-col justify-center min-h-[250px] relative">
-            
-            <!-- Default Empty State -->
-            <div id="sim-default" class="text-center py-10">
-              <i data-lucide="box" class="w-12 h-12 text-brand-textGray/30 mx-auto mb-4 animate-bounce"></i>
-              <h4 class="text-sm font-bold text-white mb-1">Awaiting Ingestion Pipeline</h4>
-              <p class="text-xs text-brand-textGray max-w-sm mx-auto">Select a sample file on the left to begin compiling your business&apos;s Corporate DNA profile.</p>
-            </div>
-
-            <!-- Loading/Processing Screen -->
-            <div id="sim-loading" class="hidden text-center py-10">
-              <div class="inline-block relative w-12 h-12 mb-4">
-                <div class="absolute inset-0 rounded-full border-4 border-amber-500/10 border-t-amber-500 animate-spin"></div>
-              </div>
-              <h4 class="text-sm font-bold text-white mb-2" id="loading-title">Compiling Corporate DNA...</h4>
-              <p class="text-xs text-brand-textGray max-w-xs mx-auto animate-pulse" id="loading-desc">Extracting Tally transaction markers and comparing supplier rate logs locally...</p>
-            </div>
-
-            <!-- Final Result Audited State -->
-            <div id="sim-result" class="hidden space-y-4">
-              <div class="flex items-center justify-between border-b border-brand-border/60 pb-3">
-                <div>
-                  <h4 class="text-sm font-heading font-bold text-white" id="res-title">DCLI DNA Synthesized</h4>
-                  <p class="text-[10px] text-brand-textGray" id="res-timestamp">Scan run completed in 1.4 seconds</p>
-                </div>
-                <div class="text-right">
-                  <span id="audit-badge" class="text-[10px] bg-green-500/20 text-green-400 font-bold border border-green-500/30 px-2.5 py-1 rounded-full flex items-center gap-1">
-                    <i data-lucide="shield" class="w-3 h-3 text-green-400"></i> Audited Locally (Gemma 4)
-                  </span>
-                </div>
-              </div>
-
-              <!-- Savings Detections Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="detections-container">
-                <!-- Dynamically Inserted DCLI audit savings events will render here -->
-              </div>
-
-              <!-- Interactive Mock SVG chart -->
-              <div class="border border-brand-border/60 rounded-xl p-4 bg-brand-card/40">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-bold text-white">Savings Projection vs Commissions</span>
-                  <span class="text-[10px] text-amber-400 font-bold" id="res-calc">₹99,000 saved → ₹3,465 Commission</span>
-                </div>
-                <!-- SVG Chart Mock -->
-                <svg viewBox="0 0 400 120" class="w-full overflow-visible">
-                  <!-- Grid Lines -->
-                  <line x1="20" y1="100" x2="380" y2="100" stroke="#2A2A35" stroke-dasharray="3,3" />
-                  <line x1="20" y1="60" x2="380" y2="60" stroke="#2A2A35" stroke-dasharray="3,3" />
-                  <line x1="20" y1="20" x2="380" y2="20" stroke="#2A2A35" stroke-dasharray="3,3" />
-
-                  <!-- Sparkline Saving Curve -->
-                  <path d="M 20 90 Q 110 80 200 30 T 380 15" fill="none" stroke="#F59E0B" stroke-width="3" class="path-animate" />
-                  <path d="M 20 90 Q 110 80 200 30 T 380 15 L 380 100 L 20 100 Z" fill="url(#grad-amber)" opacity="0.1" />
-
-                  <!-- Sparkline Commission Curve -->
-                  <path d="M 20 98 Q 110 95 200 90 T 380 85" fill="none" stroke="#6366F1" stroke-width="2" />
-                  
-                  <defs>
-                    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#F59E0B" />
-                      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                  
-                  <!-- Dots -->
-                  <circle cx="380" cy="15" r="4" fill="#F59E0B" />
-                  <circle cx="380" cy="85" r="4" fill="#6366F1" />
-                </svg>
-              </div>
-            </div>
-
-          </div>
         </div>
+
+        <!-- Column 2: Live CFO Audit Visualizer Screen Panel -->
+        <div class="flex flex-col flex-1 min-w-[280px] max-w-[340px] rounded-[28px] border border-[#2A2A35]/80 bg-[#111118]/90 backdrop-blur-md p-5 shadow-[0_0_40px_rgba(99,102,241,0.05)] relative overflow-hidden h-[460px]" id="cfo-visualizer-container">
+          <!-- Handled dynamically by JS inside the bottom scripts -->
+        </div>
+
       </div>
     </div>
   </section>
@@ -291,37 +217,37 @@
   <section id="how-to-use" class="py-20 px-6 border-t border-brand-border/40 bg-[#07070B] relative">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">💡 How to Use Docxter AI?</h2>
-        <p class="text-brand-textGray mt-3 text-lg font-heading">Follow three simple steps to start analyzing, optimizing, and auditing your business files.</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white font-heading">💡 How to Use Docxter?</h2>
+        <p class="text-brand-textGray mt-3 text-lg font-heading">Follow three simple steps to start auditing your business ledgers via WhatsApp.</p>
       </div>
 
       <!-- Three Steps Interactive Navigation Tabs -->
       <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <button onclick="setHowToUseStep(1)" id="step-tab-1" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-amber-500/10 border-2 border-amber-500 rounded-2xl transition-all hover:scale-[1.02]">
-          <div class="absolute -top-5 w-10 h-10 rounded-full bg-amber-500 border border-amber-500 flex items-center justify-center font-bold text-white font-heading shadow-md shadow-amber-950">1</div>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="upload-cloud" class="w-5 h-5 text-amber-400"></i>
+        <button onclick="setHowToUseStep(1)" id="step-tab-1" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-[#6366F1]/10 border-2 border-[#6366F1] rounded-2xl transition-all hover:scale-[1.02]">
+          <div class="absolute -top-5 w-10 h-10 rounded-full bg-[#6366F1] border border-[#6366F1] flex items-center justify-center font-bold text-white font-heading shadow-md shadow-indigo-950">1</div>
+          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="message-square" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Upload Raw Files</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Drag & drop Tally sales logs, GSTR/VAT tax spreadsheets, supplier rate agreements, or raw inventory datasets.</p>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Pair WhatsApp</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Scan the onboarding QR code or send 'Hello' to our official Twilio vCFO number to establish secure workspace link.</p>
         </button>
 
         <button onclick="setHowToUseStep(2)" id="step-tab-2" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
           <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">2</div>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="toggle-left" class="w-5 h-5 text-amber-400"></i>
+          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="file-up" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Toggle Ingest Mode</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Switch to Cloud (Gemini) for high-speed metadata audits, or Local (Gemma 4) for 100% offline air-gapped private ledger indexing.</p>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Forward Ledgers</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Forward raw Tally XML backups, transaction PDFs, GSTR reports, or balance sheet CSVs directly in the WhatsApp chat window.</p>
         </button>
 
         <button onclick="setHowToUseStep(3)" id="step-tab-3" class="w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border">
           <div class="absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading">3</div>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 mt-2">
-            <i data-lucide="message-square" class="w-5 h-5 text-amber-400"></i>
+          <div class="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-4 mt-2">
+            <i data-lucide="trending-up" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Query & Decide</h3>
-          <p class="text-xs text-brand-textGray leading-relaxed">Ask business-grade queries directly to your workspace. Get instant interactive charts, inventory metrics, and customized predictions.</p>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Get CFO Reports</h3>
+          <p class="text-xs text-brand-textGray leading-relaxed">Get instant analysis. Ask conversational audits (debt tracking, GSTR mismatch alert) and receive recovery proposals immediately.</p>
         </button>
       </div>
 
@@ -334,51 +260,38 @@
             <span class="w-2.5 h-2.5 rounded-full bg-brand-textGray/40"></span>
             <span class="text-[10px] text-brand-textGray font-mono ml-2 uppercase tracking-wider font-bold">Docxter Workspace App Live Simulator</span>
           </div>
-          <div id="sim-step-status" class="text-[10px] text-amber-400 font-bold px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">
-            Step 1 of 3: Raw File Ingestion
+          <div id="sim-step-status" class="text-[10px] text-[#818CF8] font-bold px-2.5 py-0.5 rounded bg-[#6366F1]/10 border border-[#6366F1]/20">
+            Step 1 of 3: Pair WhatsApp Webhook
           </div>
         </div>
 
         <div class="p-6 md:p-8 min-h-[300px] flex flex-col justify-center" id="how-to-use-workspace-screen">
           <!-- Step 1 Upload Content (Default) -->
           <div id="htu-content-1" class="space-y-6">
-            <div class="border-2 border-dashed border-brand-border hover:border-amber-500/40 rounded-xl p-8 text-center bg-brand-card/10 cursor-pointer transition-all flex flex-col items-center">
-              <i data-lucide="upload-cloud" class="w-10 h-10 text-brand-textGray/50 mb-3 animate-pulse"></i>
-              <span class="text-xs font-bold text-white mb-1">Drag and Drop Tally Ledgers or Tax Sheets Here</span>
-              <span class="text-[10px] text-brand-textGray">Supports PDF, XLSX, CSV, Tally XML (Max 50MB)</span>
+            <div class="border-2 border-dashed border-brand-border hover:border-[#6366F1]/40 rounded-xl p-8 text-center bg-brand-card/10 cursor-pointer transition-all flex flex-col items-center">
+              <i data-lucide="qr-code" class="w-10 h-10 text-brand-textGray/50 mb-3 animate-pulse"></i>
+              <span class="text-xs font-bold text-white mb-1">Scan to Pair WhatsApp Workspace</span>
+              <span class="text-[10px] text-[#818CF8] font-bold">Or text 'START vCFO' to +1 415 523 8886</span>
             </div>
             
             <div class="space-y-2">
               <div class="p-3 bg-brand-card border border-brand-border rounded-xl flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-500"></i>
+                  <i data-lucide="message-square" class="w-5 h-5 text-green-500"></i>
                   <div>
-                    <h4 class="text-xs font-bold text-white">tally_ledger_2026.csv</h4>
-                    <p class="text-[9px] text-brand-textGray">12.4 MB · Ingestion Completed</p>
+                    <h4 class="text-xs font-bold text-white">Twilio Sandbox Pairing Profile</h4>
+                    <p class="text-[9px] text-brand-textGray">Onboarding ID: #48201 · Connection established</p>
                   </div>
                 </div>
                 <span class="text-[9px] bg-green-500/20 text-green-400 font-bold border border-green-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
-                  <i data-lucide="check" class="w-2.5 h-2.5"></i> Loaded
-                </span>
-              </div>
-
-              <div class="p-3 bg-brand-card border border-brand-border rounded-xl flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="file-text" class="w-5 h-5 text-amber-500"></i>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">gstr_2b_reconcile.xlsx</h4>
-                    <p class="text-[9px] text-brand-textGray">4.8 MB · Ingestion Completed</p>
-                  </div>
-                </div>
-                <span class="text-[9px] bg-green-500/20 text-green-400 font-bold border border-green-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
-                  <i data-lucide="check" class="w-2.5 h-2.5"></i> Loaded
+                  <i data-lucide="check" class="w-2.5 h-2.5"></i> Connected
                 </span>
               </div>
             </div>
 
             <div class="flex justify-end">
-              <button onclick="setHowToUseStep(2)" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
-                Next: Configure Ingest Mode (Step 2) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              <button onclick="setHowToUseStep(2)" class="bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+                Next: Forward Tally Backup (Step 2) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
             </div>
           </div>
@@ -386,14 +299,14 @@
           <!-- Step 2 Switcher Content (Hidden by default) -->
           <div id="htu-content-2" class="hidden space-y-6">
             <div class="text-center max-w-md mx-auto mb-4">
-              <i data-lucide="shield-check" class="w-10 h-10 text-amber-500 mx-auto mb-3"></i>
-              <h3 class="text-sm font-bold text-white">Configure Hybrid Security Routing</h3>
-              <p class="text-xs text-brand-textGray mt-1">Select whether files are processed via secure cloud endpoints or entirely offline on your local device.</p>
+              <i data-lucide="shield-check" class="w-10 h-10 text-[#818CF8] mx-auto mb-3"></i>
+              <h3 class="text-sm font-bold text-white">Configure Ingest Security Routing</h3>
+              <p class="text-xs text-brand-textGray mt-1">Select whether your WhatsApp document uploads are parsed in the Cloud or securely indexed on local server hardware.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <!-- Online option -->
-              <button onclick="setSimulatorSecurityMode('online')" id="htu-sec-online" class="p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
+              <button onclick="setSimulatorSecurityMode('online')" id="htu-sec-online" class="p-4 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
                 <div>
                   <div class="flex items-center gap-2 mb-2">
                     <i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i>
@@ -407,8 +320,8 @@
               </button>
 
               <!-- Offline option -->
-              <button onclick="setSimulatorSecurityMode('offline')" id="htu-sec-offline" class="p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
-                <div class="absolute top-3 right-3 text-amber-400">
+              <button onclick="setSimulatorSecurityMode('offline')" id="htu-sec-offline" class="p-4 rounded-xl border-2 border-[#6366F1] bg-[#6366F1]/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]">
+                <div class="absolute top-3 right-3 text-[#818CF8]">
                   <i data-lucide="shield-alert" class="w-4 h-4 animate-pulse"></i>
                 </div>
                 <div>
@@ -418,22 +331,22 @@
                   </div>
                   <p class="text-[10px] text-brand-textGray leading-relaxed">Processes sensitive ledger balance sheets 100% offline. Files never leave your local workspace computer network.</p>
                 </div>
-                <div id="htu-offline-indicator" class="text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3">
+                <div id="htu-offline-indicator" class="text-[10px] text-[#818CF8] font-bold flex items-center gap-1 mt-3">
                   <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Active Local Indexer
                 </div>
               </button>
             </div>
 
             <!-- White-glove Setup Promo alert -->
-            <div class="p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-between text-left gap-3">
+            <div class="p-3.5 bg-[#6366F1]/10 border border-[#6366F1]/20 rounded-xl flex items-center justify-between text-left gap-3">
               <div class="flex items-center gap-2">
-                <i data-lucide="wrench" class="w-4.5 h-4.5 text-amber-400 flex-shrink-0 animate-bounce"></i>
+                <i data-lucide="wrench" class="w-4.5 h-4.5 text-[#818CF8] flex-shrink-0 animate-bounce"></i>
                 <div>
                   <span class="text-[10px] font-bold text-white block">🛠️ White-Glove Local Gemma 4 Setup Offer</span>
                   <span class="text-[9px] text-[#A2A2B5]">First 20 business installations are 100% FREE! After that, only ₹1,000 / £10 standard configuration fee.</span>
                 </div>
               </div>
-              <button onclick="triggerCustomLeadModal()" class="px-2.5 py-1 text-[9px] bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-lg transition-colors flex-shrink-0">
+              <button onclick="triggerCustomLeadModal()" class="px-2.5 py-1 text-[9px] bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors flex-shrink-0">
                 Claim Free Slot
               </button>
             </div>
@@ -442,8 +355,8 @@
               <button onclick="setHowToUseStep(1)" class="text-xs text-brand-textGray hover:text-white transition-colors flex items-center gap-1">
                 <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Step 1
               </button>
-              <button onclick="setHowToUseStep(3)" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
-                Next: Prompt & Ask (Step 3) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              <button onclick="setHowToUseStep(3)" class="bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+                Next: Query & Get Audit Reports (Step 3) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
             </div>
           </div>
@@ -451,8 +364,8 @@
           <!-- Step 3 Query Console Content (Hidden by default) -->
           <div id="htu-content-3" class="hidden space-y-6">
             <div class="text-center max-w-md mx-auto mb-2">
-              <h3 class="text-sm font-bold text-white">Interactive Workspace Chat Preview</h3>
-              <p class="text-xs text-brand-textGray mt-1">Select a quick action query below to simulate a real-time vCFO ledger intelligence response.</p>
+              <h3 class="text-sm font-bold text-white">Interactive WhatsApp Audit Preview</h3>
+              <p class="text-xs text-brand-textGray mt-1">Select a quick action query below to simulate a real-time vCFO WhatsApp intelligence audit.</p>
             </div>
 
             <!-- Workspace Chat window mock -->
@@ -467,7 +380,7 @@
                 <!-- Query/Response render area -->
                 <div id="htu-chat-render" class="hidden space-y-3 text-xs leading-relaxed">
                   <div class="flex flex-col items-end">
-                    <span class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-white font-medium" id="htu-chat-user-msg">"Which vendors overcharged?"</span>
+                    <span class="p-2.5 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 text-white font-medium" id="htu-chat-user-msg">"Which vendors overcharged?"</span>
                   </div>
                   <div class="flex flex-col items-start">
                     <div class="p-3 bg-brand-card border border-brand-border rounded-xl text-brand-textGray whitespace-pre-line" id="htu-chat-bot-msg">
@@ -479,13 +392,13 @@
 
               <!-- Quick Clickable Queries -->
               <div class="flex flex-wrap gap-2 pt-3 border-t border-brand-border/60 mt-3 justify-center">
-                <button onclick="runHtuChatMock('benchmark')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                <button onclick="runHtuChatMock('benchmark')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-[#6366F1]/30 text-[10px] text-brand-textGray hover:text-white transition-all">
                   🔍 Rate Benchmark Mismatch
                 </button>
-                <button onclick="runHtuChatMock('tax')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                <button onclick="runHtuChatMock('tax')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-[#6366F1]/30 text-[10px] text-brand-textGray hover:text-white transition-all">
                   🧾 GSTR-2B Claim List
                 </button>
-                <button onclick="runHtuChatMock('sales')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">
+                <button onclick="runHtuChatMock('sales')" class="px-2.5 py-1.5 rounded-lg bg-[#14141E] border border-brand-border hover:border-[#6366F1]/30 text-[10px] text-brand-textGray hover:text-white transition-all">
                   📈 Seasonal Product Spikes
                 </button>
               </div>
@@ -495,7 +408,7 @@
               <button onclick="setHowToUseStep(2)" class="text-xs text-brand-textGray hover:text-white transition-colors flex items-center gap-1">
                 <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Step 2
               </button>
-              <button onclick="triggerCustomLeadModal()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
+              <button onclick="triggerCustomLeadModal()" class="bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C4EE4] text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-1.5">
                 Join Premium DCLI Workspace <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
             </div>
@@ -506,24 +419,24 @@
       <!-- Click to Ask prompt playground -->
       <div class="rounded-2xl border border-brand-border bg-[#0D0D14] p-6 md:p-8">
         <h3 class="text-lg font-bold text-white font-heading mb-3 flex items-center gap-2">
-          <i data-lucide="sparkles" class="w-5 h-5 text-amber-400 flex-shrink-0 animate-pulse"></i> Interactive Prompt Playground
+          <i data-lucide="sparkles" class="w-5 h-5 text-indigo-400 flex-shrink-0 animate-pulse"></i> Interactive Prompt Playground
         </h3>
         <p class="text-xs text-brand-textGray mb-6">Select a regional market audit or sales analytics question below. The pre-sales co-pilot will automatically slide open and answer instantly!</p>
 
         <div class="grid md:grid-cols-2 gap-6">
           <!-- Cost Recovery -->
           <div class="space-y-3">
-            <h4 class="text-xs uppercase tracking-wider font-bold text-amber-400 flex items-center gap-1.5">
-              <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-500"></i> Audits & Cost Savings (INR/GBP)
+            <h4 class="text-xs uppercase tracking-wider font-bold text-indigo-400 flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-3.5 h-3.5 text-indigo-500"></i> Audits & Cost Savings (INR/GBP)
             </h4>
             <div class="space-y-2">
-              <button onclick="triggerPlaygroundQuestion('Which vendors charged us above past rates?')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+              <button onclick="triggerPlaygroundQuestion('Which vendors charged us above past rates?')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
                 <span>"Which vendors charged us above our historical price benchmarks?"</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-indigo-500 transition-colors"></i>
               </button>
-              <button onclick="triggerPlaygroundQuestion('Show me our GSTR-2B Input Credit claims.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+              <button onclick="triggerPlaygroundQuestion('Show me our GSTR-2B Input Credit claims.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
                 <span>"Show me a list of unclaimed GSTR-2B Input Credits."</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-indigo-500 transition-colors"></i>
               </button>
             </div>
           </div>
@@ -534,13 +447,13 @@
               <i data-lucide="trending-up" class="w-3.5 h-3.5 text-indigo-400"></i> Market & Product Analytics
             </h4>
             <div class="space-y-2">
-              <button onclick="triggerPlaygroundQuestion('Predict high-margin demand cycles next month.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+              <button onclick="triggerPlaygroundQuestion('Predict high-margin demand cycles next month.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
                 <span>"Which products will experience seasonal demand spikes next month?"</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-indigo-500 transition-colors"></i>
               </button>
-              <button onclick="triggerPlaygroundQuestion('Identify wholesaler churn risks.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
+              <button onclick="triggerPlaygroundQuestion('Identify wholesaler churn risks.')" class="w-full text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-xs text-[#F4F4F8] hover:text-white transition-all flex items-center justify-between group">
                 <span>"Identify client accounts at risk of churning due to payment delay."</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-amber-500 transition-colors"></i>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textGray group-hover:text-indigo-500 transition-colors"></i>
               </button>
             </div>
           </div>
@@ -558,25 +471,25 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="shield-check" class="w-5 h-5 text-amber-400"></i>
+        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="message-square" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">100% Offline Inference</h3>
-          <p class="text-sm text-brand-textGray leading-relaxed">Runs on your local computer via Ollama with Google Gemma 4. Sensitive balance sheets and inventory sheets never upload to any remote server.</p>
+          <h3 class="text-xl font-bold mb-3 text-white">WhatsApp-First Ingest</h3>
+          <p class="text-sm text-brand-textGray leading-relaxed">No custom app installs needed. Simply forward transaction backups, PDFs, and invoices to our WhatsApp chatbot to trigger automatic audits.</p>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="calculator" class="w-5 h-5 text-amber-400"></i>
+        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="calculator" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
           <h3 class="text-xl font-bold mb-3 text-white">Smart vCFO Synthesis</h3>
           <p class="text-sm text-brand-textGray leading-relaxed">Autodetects historic vendor rate overbillings, seasonal liquidity crunches, deadwood inventory items, and Input Tax Credit claims automatically.</p>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
-            <i data-lucide="refresh-cw" class="w-5 h-5 text-amber-400"></i>
+        <div class="glass p-8 rounded-2xl hover:border-[#6366F1]/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+            <i data-lucide="refresh-cw" class="w-5 h-5 text-[#818CF8]"></i>
           </div>
           <h3 class="text-xl font-bold mb-3 text-white">Online/Offline Hybrid</h3>
           <p class="text-sm text-brand-textGray leading-relaxed">Toggle to cloud Gemini with 1-click for zero-maintenance and zero API usage billing. Uses cookie persistence for effortless workspaces.</p>
@@ -617,7 +530,7 @@
       <div class="grid md:grid-cols-3 gap-6 items-stretch">
         
         <!-- Free Tier -->
-        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-amber-500/20">
+        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-[#6366F1]/20">
           <p class="text-xs font-semibold uppercase tracking-widest text-[#8B8B9E] mb-2">Free</p>
           <div class="flex items-baseline gap-1 mb-4">
             <span class="text-4xl font-extrabold text-white">Free</span>
@@ -626,28 +539,28 @@
           
           <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 3 active documents
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 3 active documents
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 5MB size limit
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 5MB size limit
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> PDF document chats
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> PDF document chats
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Online Gemini LLM engine
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> Online Gemini LLM engine
             </li>
           </ul>
 
-          <button onclick="window.location.href='http://localhost:3001/signup?plan=free'" class="w-full border border-brand-border hover:border-amber-500/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
+          <button onclick="window.location.href='http://localhost:3001/signup?plan=free'" class="w-full border border-brand-border hover:border-[#6366F1]/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
             Get Started Free
           </button>
         </div>
 
         <!-- Pro Plan (DCLI) -->
-        <div class="flex flex-col rounded-2xl border border-amber-500 bg-gradient-to-b from-amber-500/10 to-orange-500/5 p-8 transition-all shadow-[0_0_30px_rgba(245,158,11,0.15)] relative">
+        <div class="flex flex-col rounded-2xl border border-[#6366F1] bg-gradient-to-b from-[#6366F1]/10 to-[#8B5CF6]/5 p-8 transition-all shadow-[0_0_30px_rgba(99,102,241,0.15)] relative">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white uppercase tracking-wider">
+            <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white uppercase tracking-wider">
               Highly Recommended
             </span>
           </div>
@@ -660,35 +573,35 @@
 
           <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
             <li class="flex items-center gap-2.5 font-semibold text-white">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Unlimited workspaces
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> Unlimited workspaces
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 50MB file uploads
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 50MB file uploads
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Tally CSV, Excel, TXT, PDF support
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> Tally CSV, Excel, TXT, PDF support
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 100% Offline Google Gemma 4
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 100% Offline Google Gemma 4
             </li>
             <li class="flex items-center gap-2.5" id="pricing-tax-audit">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> GST Mismatches & 2.5% Shared Savings
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> GST Mismatches & 2.5% Shared Savings
             </li>
-            <li class="flex items-center gap-2.5 font-bold text-amber-400">
-              <i data-lucide="check" class="w-4 h-4 text-amber-400"></i> First ₹10,000 / £100 savings FREE
+            <li class="flex items-center gap-2.5 font-bold text-[#818CF8]">
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> First ₹10,000 / £100 savings FREE
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 2.5% shared value fee beyond that
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 2.5% shared value fee beyond that
             </li>
           </ul>
 
-          <button onclick="window.location.href='http://localhost:3001/signup?plan=pro'" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white py-3 rounded-xl text-xs font-bold transition-all shadow-md shadow-amber-900/30">
+          <button onclick="window.location.href='http://localhost:3001/signup?plan=pro'" class="w-full bg-[#6366F1] hover:bg-[#5356E2] text-white py-3 rounded-xl text-xs font-bold transition-all shadow-md shadow-indigo-900/30">
             Request Partnership Access
           </button>
         </div>
 
         <!-- Enterprise Tier -->
-        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-amber-500/20">
+        <div class="flex flex-col rounded-2xl border border-brand-border bg-brand-card p-8 transition-all hover:border-[#6366F1]/20">
           <p class="text-xs font-semibold uppercase tracking-widest text-[#8B8B9E] mb-2">Enterprise</p>
           <div class="flex items-baseline gap-1 mb-4">
             <span class="text-4xl font-extrabold text-white">Custom</span>
@@ -697,20 +610,20 @@
 
           <ul class="space-y-3 flex-1 mb-8 text-xs text-brand-textLight">
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> All Pro features included
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> All Pro features included
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Local dedicated GPU server setup
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> Local dedicated GPU server setup
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Shared team corporate DNA profiles
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> Shared team corporate DNA profiles
             </li>
             <li class="flex items-center gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 24/7 dedicated system diagnostics SLA
+              <i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> 24/7 dedicated system diagnostics SLA
             </li>
           </ul>
 
-          <button onclick="triggerCustomLeadModal()" class="w-full border border-brand-border hover:border-amber-500/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
+          <button onclick="triggerCustomLeadModal()" class="w-full border border-brand-border hover:border-[#6366F1]/50 bg-[#14141E] text-white py-3 rounded-xl text-xs font-bold transition-all">
             Contact Sales
           </button>
         </div>
@@ -718,13 +631,13 @@
       </div>
 
       <!-- White-Glove Installation Promo Banner -->
-      <div class="mt-12 p-6 md:p-8 rounded-2xl border border-amber-500/20 bg-gradient-to-r from-brand-card to-amber-500/5 relative overflow-hidden shadow-xl">
+      <div class="mt-12 p-6 md:p-8 rounded-2xl border border-[#6366F1]/20 bg-gradient-to-r from-brand-card to-[#6366F1]/5 relative overflow-hidden shadow-xl">
         <!-- Glow accent -->
-        <div class="absolute -right-20 -bottom-20 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl"></div>
+        <div class="absolute -right-20 -bottom-20 w-48 h-48 bg-[#6366F1]/10 rounded-full blur-2xl"></div>
         
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative">
           <div class="space-y-2 max-w-2xl text-left">
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 text-[#818CF8] text-[10px] font-bold uppercase tracking-wider mb-2">
               <i data-lucide="wrench" class="w-3.5 h-3.5 animate-bounce"></i> White-Glove Setup Promotion
             </div>
             <h3 class="text-lg md:text-xl font-extrabold text-white font-heading">
@@ -743,12 +656,12 @@
           <div class="flex flex-col items-center md:items-end justify-center gap-2 flex-shrink-0 text-center md:text-right min-w-[200px]">
             <div class="text-xs text-brand-textGray">
               <span class="line-through text-brand-textGray/60 font-medium">₹1,000 / £10</span> 
-              <span class="text-xl font-heading font-black text-amber-400 block mt-0.5">Promo: ₹0 / £0</span>
+              <span class="text-xl font-heading font-black text-[#818CF8] block mt-0.5">Promo: ₹0 / £0</span>
             </div>
             <span class="text-[9px] text-green-400 font-bold bg-green-500/10 border border-green-500/30 px-2.5 py-0.5 rounded-full uppercase tracking-wider block">
               First 20 Sessions Free (6 Left!)
             </span>
-            <button onclick="triggerCustomLeadModal()" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs px-6 py-3 rounded-xl transition-all shadow-md shadow-amber-900/30 mt-2">
+            <button onclick="triggerCustomLeadModal()" class="w-full bg-[#6366F1] hover:bg-[#5356E2] text-white font-bold text-xs px-6 py-3 rounded-xl transition-all shadow-md shadow-indigo-900/30 mt-2">
               Book White-Glove Setup
             </button>
           </div>
@@ -760,13 +673,13 @@
 
   <!-- Leads Modal Pop-up -->
   <div id="leads-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
-    <div class="relative w-full max-w-md bg-[#0D0D14] border border-amber-500/20 rounded-2xl p-6 shadow-2xl overflow-hidden">
+    <div class="relative w-full max-w-md bg-[#0D0D14] border border-[#6366F1]/20 rounded-2xl p-6 shadow-2xl overflow-hidden">
       <!-- Glow (pointer-events disabled to prevent blocking clicks) -->
-      <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/20 rounded-full blur-xl pointer-events-none"></div>
+      <div class="absolute -top-10 -right-10 w-24 h-24 bg-[#6366F1]/20 rounded-full blur-xl pointer-events-none"></div>
       
       <div class="flex justify-between items-center mb-6 relative z-10">
         <h3 class="text-lg font-bold text-white font-heading flex items-center gap-2">
-          <i data-lucide="sparkles" class="w-5 h-5 text-amber-400"></i> Secure DCLI Demo Invite
+          <i data-lucide="sparkles" class="w-5 h-5 text-[#818CF8]"></i> Secure DCLI Demo Invite
         </h3>
         <button type="button" onclick="closeLeadsModal()" class="text-brand-textGray hover:text-white transition-colors focus:outline-none" aria-label="Close modal">
           <i data-lucide="x" class="w-5 h-5" style="pointer-events: none;"></i>
@@ -780,18 +693,18 @@
       <form id="modal-form" onsubmit="submitLeadInterest(event)" class="space-y-4">
         <div>
           <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Your Full Name</label>
-          <input type="text" id="modal-name" required placeholder="Charchit Dhawan" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+          <input type="text" id="modal-name" required placeholder="Charchit Dhawan" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-[#6366F1]">
         </div>
         <div>
           <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Business Email Address</label>
-          <input type="email" id="modal-email" required placeholder="ceo@company.com" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+          <input type="email" id="modal-email" required placeholder="ceo@company.com" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-[#6366F1]">
         </div>
         <div>
           <label class="block text-[10px] uppercase font-bold tracking-wider text-brand-textGray mb-1">Business Type</label>
-          <input type="text" id="modal-type" placeholder="e.g. CA Firm, Wholesaler, UK SMB" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500">
+          <input type="text" id="modal-type" placeholder="e.g. CA Firm, Wholesaler, UK SMB" class="w-full bg-[#111118] border border-brand-border rounded-xl px-4 py-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-[#6366F1]">
         </div>
         
-        <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs py-3 rounded-xl transition-all shadow-lg shadow-amber-950">
+        <button type="submit" class="w-full bg-[#6366F1] hover:bg-[#5356E2] text-white font-bold text-xs py-3 rounded-xl transition-all shadow-lg shadow-indigo-950">
           Claim My vCFO priority slot
         </button>
       </form>
@@ -800,10 +713,10 @@
 
   <!-- FAQ Section -->
   <section id="faq" class="py-24 px-6 border-t border-brand-border/40 relative overflow-hidden bg-[#0A0A0F]">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_-10%,rgba(245,158,11,0.06),transparent)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_-10%,rgba(99,102,241,0.06),transparent)] pointer-events-none"></div>
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-4">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 text-[#818CF8] text-[10px] font-bold uppercase tracking-wider mb-4">
           <i data-lucide="help-circle" class="w-3.5 h-3.5 animate-pulse"></i> Frequently Asked Questions
         </div>
         <h2 class="text-3xl md:text-4xl font-extrabold text-white font-heading leading-tight">
@@ -816,7 +729,7 @@
 
       <div class="space-y-4">
         <!-- FAQ 1 -->
-        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+        <div class="border border-brand-border/60 hover:border-[#6366F1]/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
           <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
             <span class="text-sm font-bold text-white pr-4">🔒 Is my sensitive Tally and GST tax data secure with Docxter?</span>
             <div id="faq-icon-1" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
@@ -829,7 +742,7 @@
         </div>
 
         <!-- FAQ 2 -->
-        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+        <div class="border border-brand-border/60 hover:border-[#6366F1]/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
           <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
             <span class="text-sm font-bold text-white pr-4">💰 How does the 2.5% Performance Commission work in practice?</span>
             <div id="faq-icon-2" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
@@ -837,12 +750,12 @@
             </div>
           </button>
           <div id="faq-content-2" class="hidden px-6 pb-6 text-xs text-brand-textGray leading-relaxed border-t border-brand-border/20 pt-4">
-            We only make money when you save money. The first <strong class="text-white">₹10,000 / £100</strong> of verified savings (e.g. unclaimed GSTR-2B Input Tax Credit, vendor overbilling anomalies) is <strong class="text-amber-400">100% commission-free</strong>. Beyond that, we invoice a small 2.5% shared-value commission. If Docxter's audits find ₹0 in savings, you pay only the flat ₹799 / £29 subscription fee!
+            We only make money when you save money. The first <strong class="text-white">₹10,000 / £100</strong> of verified savings (e.g. unclaimed GSTR-2B Input Tax Credit, vendor overbilling anomalies) is <strong class="text-white">100% commission-free</strong>. Beyond that, we invoice a small 2.5% shared-value commission. If Docxter's audits find ₹0 in savings, you pay only the flat ₹799 / £29 subscription fee!
           </div>
         </div>
 
         <!-- FAQ 3 -->
-        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+        <div class="border border-brand-border/60 hover:border-[#6366F1]/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
           <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
             <span class="text-sm font-bold text-white pr-4">🛠️ I am not tech-savvy. How do I set up Ollama and local Gemma 4?</span>
             <div id="faq-icon-3" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
@@ -855,7 +768,7 @@
         </div>
 
         <!-- FAQ 4 -->
-        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+        <div class="border border-brand-border/60 hover:border-[#6366F1]/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
           <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
             <span class="text-sm font-bold text-white pr-4">📊 Can Docxter parse custom spreadsheets and non-standard invoice formats?</span>
             <div id="faq-icon-4" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
@@ -868,7 +781,7 @@
         </div>
 
         <!-- FAQ 5 -->
-        <div class="border border-brand-border/60 hover:border-amber-500/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
+        <div class="border border-brand-border/60 hover:border-[#6366F1]/30 bg-brand-card/25 rounded-2xl transition-all duration-300 overflow-hidden">
           <button onclick="toggleFaq(5)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
             <span class="text-sm font-bold text-white pr-4">🧠 How is Docxter different from a standard ChatGPT wrapper?</span>
             <div id="faq-icon-5" class="w-7 h-7 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-[#8B8B9E] transition-transform duration-300">
@@ -887,7 +800,7 @@
   <footer class="border-t border-brand-border/40 py-12 px-6 bg-[#07070B]">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-2">
-        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center">
           <i data-lucide="zap" class="w-3.5 h-3.5 text-white"></i>
         </div>
         <span class="font-bold text-sm text-white">Docxter AI</span>
@@ -902,27 +815,27 @@
   <!-- Floating Lead capture Sales Advisor Chat Invite -->
   <div id="floating-chat-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
     <!-- Bubble -->
-    <div id="chat-bubble" class="mb-3 mr-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-4 py-2.5 rounded-2xl rounded-br-sm shadow-xl animate-bounce flex items-center gap-1.5 border border-amber-400/30">
+    <div id="chat-bubble" class="mb-3 mr-1 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white text-xs font-bold px-4 py-2.5 rounded-2xl rounded-br-sm shadow-xl animate-bounce flex items-center gap-1.5 border border-[#6366F1]/30">
       <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
       <span>vCFO Audit Invite: Save ₹1,000!</span>
     </div>
     <!-- Chat Button -->
-    <button onclick="toggleChatWindow()" class="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white flex items-center justify-center shadow-2xl transition-all border border-amber-400/30 hover:scale-105">
+    <button onclick="toggleChatWindow()" class="w-14 h-14 rounded-full bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] hover:from-[#5356E2] hover:to-[#7C3AED] text-white flex items-center justify-center shadow-2xl transition-all border border-[#6366F1]/30 hover:scale-105">
       <i data-lucide="message-square" id="chat-icon" class="w-6 h-6"></i>
     </button>
   </div>
 
   <!-- Dynamic Chat Window -->
-  <div id="chat-window" class="fixed bottom-24 right-6 w-[360px] sm:w-[380px] h-[500px] rounded-2xl bg-[#0D0D14] border border-amber-500/20 shadow-2xl shadow-black/80 flex flex-col overflow-hidden hidden z-50">
+  <div id="chat-window" class="fixed bottom-24 right-6 w-[360px] sm:w-[380px] h-[500px] rounded-2xl bg-[#0D0D14] border border-[#6366F1]/20 shadow-2xl shadow-black/80 flex flex-col overflow-hidden hidden z-50">
     <!-- Chat Header -->
-    <div class="p-4 bg-gradient-to-r from-amber-600/20 to-orange-600/10 border-b border-[#2A2A35] flex items-center justify-between">
+    <div class="p-4 bg-gradient-to-r from-[#6366F1]/20 to-[#8B5CF6]/10 border-b border-[#2A2A35] flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center shadow-lg">
           <i data-lucide="brain" class="w-5 h-5 text-white animate-pulse"></i>
         </div>
         <div>
           <h3 class="text-xs font-black text-[#F4F4F8] leading-none">Docxter Sales Advisor</h3>
-          <span class="text-[10px] text-amber-400 font-bold leading-tight flex items-center gap-1 mt-0.5">
+          <span class="text-[10px] text-[#818CF8] font-bold leading-tight flex items-center gap-1 mt-0.5">
             <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Online Sandbox
           </span>
         </div>
@@ -943,8 +856,8 @@
 
     <!-- Quick Presets -->
     <div class="px-4 py-2 border-t border-brand-border bg-[#0D0D14] flex flex-wrap gap-1.5">
-      <button onclick="sendChatMessage('What is DCLI?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">What is DCLI?</button>
-      <button onclick="sendChatMessage('Is it secure?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-amber-500/30 text-[10px] text-brand-textGray hover:text-white transition-all">Is it secure?</button>
+      <button onclick="sendChatMessage('What is DCLI?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-[#6366F1]/30 text-[10px] text-brand-textGray hover:text-white transition-all">What is DCLI?</button>
+      <button onclick="sendChatMessage('Is it secure?')" class="px-2.5 py-1 rounded-full bg-brand-card border border-brand-border hover:border-[#6366F1]/30 text-[10px] text-brand-textGray hover:text-white transition-all">Is it secure?</button>
     </div>
 
     <!-- Inputs -->
@@ -954,11 +867,11 @@
         id="chat-input"
         placeholder="Ask about DCLI, local Gemma 4..."
         onkeydown="if(event.key === 'Enter') sendChatMessage(this.value)"
-        class="flex-1 bg-[#111118] border border-brand-border rounded-xl px-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-amber-500"
+        class="flex-1 bg-[#111118] border border-brand-border rounded-xl px-3 text-xs text-white placeholder-brand-textGray/40 focus:outline-none focus:border-[#6366F1]"
       />
       <button
         onclick="sendChatMessage(document.getElementById('chat-input').value)"
-        class="w-8 h-8 rounded-xl bg-amber-600 hover:bg-amber-500 text-white flex items-center justify-center transition-colors"
+        class="w-8 h-8 rounded-xl bg-[#6366F1] hover:bg-[#5356E2] text-white flex items-center justify-center transition-colors"
       >
         <i data-lucide="send" class="w-3.5 h-3.5"></i>
       </button>
@@ -983,8 +896,8 @@
       // Format Italics: _text_ -> <em class="italic text-[#A2A2B5]">...</em>
       html = html.replace(/_([^_]+)_/g, '<em class="italic text-[#A2A2B5]">$1</em>');
       
-      // Format Underline: __text__ -> <span class="underline decoration-amber-500 decoration-2 underline-offset-4 font-extrabold text-white">...</span>
-      html = html.replace(/__([^_]+)__/g, '<span class="underline decoration-amber-500 decoration-2 underline-offset-4 font-extrabold text-white">$1</span>');
+      // Format Underline: __text__ -> <span class="underline decoration-[#6366F1] decoration-2 underline-offset-4 font-extrabold text-white">...</span>
+      html = html.replace(/__([^_]+)__/g, '<span class="underline decoration-[#6366F1] decoration-2 underline-offset-4 font-extrabold text-white">$1</span>');
       
       // Replace linebreaks with clean paragraphs or bullet lists
       html = html.split('\n').map(line => {
@@ -1006,17 +919,17 @@
       
       // Update step status text
       const statusText = document.getElementById("sim-step-status");
-      if(step === 1) statusText.innerText = "Step 1 of 3: Raw File Ingestion";
-      else if(step === 2) statusText.innerText = "Step 2 of 3: Hybrid Security Mode";
-      else statusText.innerText = "Step 3 of 3: Workspace Chat Console";
+      if(step === 1) statusText.innerText = "Step 1 of 3: Pair WhatsApp Webhook";
+      else if(step === 2) statusText.innerText = "Step 2 of 3: Configure Ingest Security Routing";
+      else statusText.innerText = "Step 3 of 3: Interactive WhatsApp Audit Preview";
       
       // Update tab button styles
       for(let i = 1; i <= 3; i++) {
         const btn = document.getElementById("step-tab-" + i);
         const indicator = btn.querySelector(".absolute");
         if(i === step) {
-          btn.className = "w-full text-left relative flex flex-col items-center text-center p-6 bg-amber-500/10 border-2 border-amber-500 rounded-2xl transition-all hover:scale-[1.02]";
-          indicator.className = "absolute -top-5 w-10 h-10 rounded-full bg-amber-500 border border-amber-500 flex items-center justify-center font-bold text-white font-heading shadow-md shadow-amber-950";
+          btn.className = "w-full text-left relative flex flex-col items-center text-center p-6 bg-[#6366F1]/10 border-2 border-[#6366F1] rounded-2xl transition-all hover:scale-[1.02]";
+          indicator.className = "absolute -top-5 w-10 h-10 rounded-full bg-[#6366F1] border border-[#6366F1] flex items-center justify-center font-bold text-white font-heading shadow-md shadow-indigo-950";
         } else {
           btn.className = "w-full text-left relative flex flex-col items-center text-center p-6 bg-brand-card/30 border-2 border-brand-border/50 rounded-2xl transition-all hover:scale-[1.02] hover:border-brand-border";
           indicator.className = "absolute -top-5 w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center font-bold text-brand-textGray font-heading";
@@ -1038,19 +951,19 @@
       const offlineInd = document.getElementById("htu-offline-indicator");
       
       if(mode === 'online') {
-        onlineCard.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
-        offlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        onlineCard.className = "p-4 rounded-xl border-2 border-[#6366F1] bg-[#6366F1]/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        offlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
         
-        onlineInd.className = "text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3";
+        onlineInd.className = "text-[10px] text-[#818CF8] font-bold flex items-center gap-1 mt-3";
         onlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping"></span> Active Cloud Router';
         
         offlineInd.className = "text-[10px] text-brand-textGray font-semibold flex items-center gap-1 mt-3";
         offlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-brand-textGray"></span> Inactive';
       } else {
-        offlineCard.className = "p-4 rounded-xl border-2 border-amber-500 bg-amber-500/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
-        onlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-amber-500/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        offlineCard.className = "p-4 rounded-xl border-2 border-[#6366F1] bg-[#6366F1]/5 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
+        onlineCard.className = "p-4 rounded-xl border border-brand-border bg-brand-card hover:border-[#6366F1]/40 text-left transition-all relative flex flex-col justify-between min-h-[140px]";
         
-        offlineInd.className = "text-[10px] text-amber-400 font-bold flex items-center gap-1 mt-3";
+        offlineInd.className = "text-[10px] text-[#818CF8] font-bold flex items-center gap-1 mt-3";
         offlineInd.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Active Local Indexer';
         
         onlineInd.className = "text-[10px] text-brand-textGray font-semibold flex items-center gap-1 mt-3";
@@ -1086,6 +999,303 @@
         }, 800);
       }
     }
+ 
+    // Live WhatsApp Simulator State & Dual-Pane Interactions
+    const CHAT_SIMULATIONS = {
+      debt: {
+        user: "kis se kitna lena hai? (debt audit)",
+        bot: "📊 *Outstanding Debt Audit Summary:*\n\nTotal Receivables: *₹4,85,200* across *12 active debtors*.\n\n⚠️ *Critical Overdue Alerts (Late > 60 Days):*\n1️⃣ *Patel Steel Co.* — *₹1,85,000* (Due since 72 days)\n2️⃣ *Royal Hardwares* — *₹92,500* (Due since 64 days)\n\n💡 *vCFO Recovery Template Generated:*\n\"Dear Patel Steel team, this is a reminder for payment of outstanding voucher #892...\"\n\n*Action:* Send payment link via WhatsApp directly?"
+      },
+      gst: {
+        user: "GST mismatch audit check",
+        bot: "🔍 *GST GSTR-2B Input Tax Credit (ITC) Reconciliation:*\n\nWe matched your Tally purchases against raw GST portal filings:\n\n*Total ITC Leakage Detected: ₹84,210*\n\n🚨 *Top Vendor Discrepancy:*\n*Shree Balaji Logistics* billed GST rate of *18%* on voucher #892, but only filed *12%* in their monthly return.\n*Estimated Refund Recovery: ₹32,450.*\n\n💡 *Action:* Reply *'Balaji Alert'* to auto-generate their mismatch notification copy!"
+      },
+      stock: {
+        user: "dead stock liquidation list",
+        bot: "📦 *Stagnant Stock & Deadwood Inventory Alert:*\n\nTotal capital locked in inactive inventory (> 90 days): *₹3,20,000*\n\n📉 *Top Deadwood Stock Items:*\n1️⃣ *Grade-A Steel Rods (12mm)* — *800 units* (Unsold for 110 days) | locked: *₹1,60,000*\n2️⃣ *Heavy-duty Fasteners* — *1,200 units* (Unsold for 95 days) | locked: *₹95,000*\n\n💡 *vCFO Liquidation Advice:* Sell Rods at a *12% discount* to clear warehouse space. Cash released can pay off Patel Steel outstanding interest!"
+      },
+      tally: {
+        user: "Upload Tally XML Backup",
+        bot: "📥 *Tally Prime XML Backup Parsed successfully!*\n\nSynchronized *1,240 ledger accounts*, *4,800 vouchers*, and *86 inventory items* into your primary vCFO grounding vector workspace.\n\n📊 *Instantly Analyzed:*\n* Cash balance: *₹12,45,000*\n* Accounts Receivable: *₹9,82,000*\n* Accounts Payable: *₹6,40,000*\n\nYou are ready to start asking conversational cash-flow audits!"
+      }
+    };
+
+    function formatWhatsAppMessage(text) {
+      if(!text) return "";
+      let html = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\*(.*?)\*/g, "<strong class='font-bold text-[#F4F4F8]'>$1</strong>")
+        .replace(/__(.*?)__/g, "<span class='underline'>$1</span>")
+        .replace(/_(.*?)_/g, "<em class='italic'>$1</em>")
+        .replace(/~(.*?)~/g, "<del class='line-through text-red-400'>$1</del>")
+        .replace(/\n/g, "<br/>");
+      return html;
+    }
+
+    let chatMessages = [
+      { sender: "bot", text: "Hi! Welcome to *Docxter vCFO* 🚀\n\nI am your active AI cash-recovery assistant. Send your purchase invoices, ledger PDFs, or Tally XML backups here to run real-time cash flow audits!" }
+    ];
+    let isTyping = false;
+    let activeTab = "debt";
+
+    function renderWhatsAppChat() {
+      const container = document.getElementById("whatsapp-chat-container");
+      if (!container) return;
+      container.innerHTML = "";
+      
+      chatMessages.forEach(msg => {
+        const msgDiv = document.createElement("div");
+        msgDiv.className = `flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`;
+        
+        const bubbleDiv = document.createElement("div");
+        bubbleDiv.className = `max-w-[85%] rounded-2xl px-3.5 py-2 text-[10px] leading-relaxed shadow-sm transition-all font-sans ${
+          msg.sender === "user"
+            ? msg.isAttachment 
+              ? "bg-[#6366F1]/20 border border-[#6366F1]/30 text-[#818CF8] rounded-tr-sm"
+              : "bg-[#6366F1] text-white rounded-tr-sm shadow-[0_0_12px_rgba(99,102,241,0.2)]"
+            : "bg-[#1E1E28] border border-[#2A2A35] text-[#D1D1DF] rounded-tl-sm"
+        }`;
+        
+        if (msg.isAttachment) {
+          bubbleDiv.innerHTML = `
+            <div class="flex items-center gap-2 mb-1.5 pb-1.5 border-b border-[#6366F1]/20 text-[8.5px] font-bold">
+              <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-emerald-500"></i> TALLY_LEDGER.xml (182KB)
+            </div>
+            ${formatWhatsAppMessage(msg.text)}
+          `;
+        } else {
+          bubbleDiv.innerHTML = formatWhatsAppMessage(msg.text);
+        }
+        
+        msgDiv.appendChild(bubbleDiv);
+        container.appendChild(msgDiv);
+      });
+      
+      container.scrollTop = container.scrollHeight;
+      lucide.createIcons();
+    }
+
+    function renderCFOVisualizer(tab) {
+      const container = document.getElementById("cfo-visualizer-container");
+      if (!container) return;
+      
+      container.innerHTML = "";
+      
+      // Header
+      const headerDiv = document.createElement("div");
+      headerDiv.className = "flex items-center justify-between pb-3 border-b border-[#2A2A35]/60 mb-4";
+      headerDiv.innerHTML = `
+        <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#818CF8]">vCFO Audit Engine</span>
+        <span class="flex items-center gap-1 text-[9px] text-[#5A5A72] font-semibold">
+          <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping"></span> VSS Monitored
+        </span>
+      `;
+      container.appendChild(headerDiv);
+      
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "space-y-4 flex-1 flex flex-col justify-between";
+      
+      if (tab === "debt") {
+        contentDiv.innerHTML = `
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-[#F4F4F8]">Receivables Aging Breakdown</h4>
+            <p class="text-[10px] text-[#8B8B9E] leading-relaxed">Docxter isolated overdue balances with active late-interest trackers.</p>
+            
+            <div class="space-y-2.5 pt-2">
+              <div class="space-y-1">
+                <div class="flex justify-between text-[10px] font-semibold">
+                  <span class="text-red-400">Patel Steel Co.</span>
+                  <span class="text-white">₹1,85,000</span>
+                </div>
+                <div class="h-2 rounded bg-[#0A0A0F] overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-red-500 to-red-400 rounded" style="width: 85%"></div>
+                </div>
+                <div class="flex justify-between text-[8px] text-[#5A5A72] font-bold">
+                  <span>72 days overdue</span>
+                  <span class="text-red-400">+18% p.a. interest tracking</span>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between text-[10px] font-semibold">
+                  <span class="text-orange-400">Royal Hardwares</span>
+                  <span class="text-white">₹92,500</span>
+                </div>
+                <div class="h-2 rounded bg-[#0A0A0F] overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded" style="width: 55%"></div>
+                </div>
+                <div class="flex justify-between text-[8px] text-[#5A5A72] font-bold">
+                  <span>64 days overdue</span>
+                  <span class="text-orange-400">Reminder sent 2d ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-3 bg-red-500/5 rounded-xl border border-red-500/10">
+            <p class="text-[9px] text-red-400 leading-normal font-semibold">
+              🚨 Alert: ₹2.77L locked in credit beyond safety limits. vCFO recovery template drafted.
+            </p>
+          </div>
+        `;
+      } else if (tab === "gst") {
+        contentDiv.innerHTML = `
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-[#F4F4F8]">GSTR-2B ITC Mismatch Reconciliation</h4>
+            <p class="text-[10px] text-[#8B8B9E] leading-relaxed">Audit cross-checks voucher GST allocations against raw vendor portal filings.</p>
+            
+            <div class="rounded-xl border border-[#2A2A35]/50 bg-[#0A0A0F] overflow-hidden mt-2">
+              <div class="grid grid-cols-4 bg-[#1E1E28]/50 p-2 text-[8px] text-[#5A5A72] font-extrabold uppercase border-b border-[#2A2A35]/50">
+                <span>Vendor</span>
+                <span>Tally</span>
+                <span>G2B</span>
+                <span class="text-right">Leakage</span>
+              </div>
+              <div class="grid grid-cols-4 p-2 text-[9px] font-medium border-b border-[#2A2A35]/30 items-center">
+                <span class="text-white truncate">Balaji Logi</span>
+                <span class="text-red-400 font-bold">18%</span>
+                <span class="text-green-400 font-bold">12%</span>
+                <span class="text-red-400 text-right font-bold">₹32,450</span>
+              </div>
+              <div class="grid grid-cols-4 p-2 text-[9px] font-medium items-center">
+                <span class="text-white truncate">Garg Trad</span>
+                <span class="text-red-400 font-bold">12%</span>
+                <span class="text-green-400 font-bold">0%</span>
+                <span class="text-red-400 text-right font-bold">₹51,760</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-3 bg-[#6366F1]/5 rounded-xl border border-[#6366F1]/10">
+            <div class="flex justify-between text-[10px] font-bold text-[#818CF8] mb-0.5">
+              <span>Unclaimed Tax Credit:</span>
+              <span>₹84,210</span>
+            </div>
+            <p class="text-[8px] text-[#8B8B9E] leading-normal">
+              Interpreted rate discrepancies logged under GSTR-2B Section 16(4) limits. Action notification active.
+            </p>
+          </div>
+        `;
+      } else if (tab === "stock") {
+        contentDiv.innerHTML = `
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-[#F4F4F8]">Stagnant Inventory Analysis</h4>
+            <p class="text-[10px] text-[#8B8B9E] leading-relaxed">Identified slow-moving deadwood inventory with active holding charges.</p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-xs font-bold text-orange-400">800u</div>
+                <div class="flex-1 min-w-0">
+                  <h5 class="text-[10px] font-semibold text-white truncate">Grade-A Steel Rods (12mm)</h5>
+                  <p class="text-[8px] text-red-400 font-medium">Stagnant 110d | ₹1.60L Value</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-xs font-bold text-[#818CF8]">1.2k</div>
+                <div class="flex-1 min-w-0">
+                  <h5 class="text-[10px] font-semibold text-white truncate">Heavy-duty Fasteners</h5>
+                  <p class="text-[8px] text-[#818CF8] font-medium">Stagnant 95d | ₹95K Value</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-3 bg-[#16161F] rounded-xl border border-[#2A2A35]/80 space-y-1">
+            <div class="flex justify-between text-[9px] font-bold text-white">
+              <span>Locked Capital:</span>
+              <span>₹3,20,000</span>
+            </div>
+            <div class="flex justify-between text-[9px] font-bold text-[#818CF8]">
+              <span>Discount Advice:</span>
+              <span>12% off (Release ₹1.60L)</span>
+            </div>
+          </div>
+        `;
+      } else if (tab === "tally") {
+        contentDiv.innerHTML = `
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold text-[#F4F4F8]">Tally Prime Sync Console</h4>
+            <p class="text-[10px] text-[#8B8B9E] leading-relaxed">Displaying connection pipeline parameters mapped to your database.</p>
+            
+            <div class="space-y-2 pt-2">
+              <div class="flex items-center justify-between p-2 rounded-lg bg-[#0A0A0F] border border-[#2A2A35]/50">
+                <span class="text-[9px] text-[#8B8B9E]">Active Ledger Accounts</span>
+                <span class="text-[10px] font-extrabold text-green-400">1,240 Syncs</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2 rounded-lg bg-[#0A0A0F] border border-[#2A2A35]/50">
+                <span class="text-[9px] text-[#8B8B9E]">Voucher Transaction Logs</span>
+                <span class="text-[10px] font-extrabold text-green-400">4,800 Syncs</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2 rounded-lg bg-[#0A0A0F] border border-[#2A2A35]/50">
+                <span class="text-[9px] text-[#8B8B9E]">Connection Endpoint</span>
+                <span class="text-[10px] font-mono text-[#818CF8]">dcli-node-agent</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 p-3 bg-green-500/5 rounded-xl border border-green-500/10">
+            <div class="w-2 h-2 rounded-full bg-green-400 animate-ping"></div>
+            <span class="text-[9px] text-green-400 font-extrabold uppercase tracking-wide">Sync Status: Synced</span>
+          </div>
+        `;
+      }
+      
+      container.appendChild(contentDiv);
+      lucide.createIcons();
+    }
+
+    function triggerShowcaseSimulation(key) {
+      if (isTyping) return;
+      activeTab = key;
+      
+      // Update trigger buttons
+      const triggers = ["debt", "gst", "stock", "tally"];
+      triggers.forEach(t => {
+        const btn = document.getElementById("btn-trigger-" + t);
+        if (btn) {
+          if (t === key) {
+            btn.className = "text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#6366F1]/20 border-[#6366F1] text-[#818CF8]";
+          } else {
+            btn.className = "text-[9px] px-2.5 py-1.5 rounded-lg border transition-all font-bold bg-[#0A0A0F] border-[#2A2A35] text-[#8B8B9E] hover:border-[#4A4A5A]";
+          }
+        }
+      });
+      
+      // Push user message
+      chatMessages.push({ sender: "user", text: CHAT_SIMULATIONS[key].user, isAttachment: key === "tally" });
+      renderWhatsAppChat();
+      
+      // Show typing indicator
+      isTyping = true;
+      document.getElementById("whatsapp-typing-indicator").style.display = "flex";
+      
+      // Scroll chat
+      const chatContainer = document.getElementById("whatsapp-chat-container");
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+      
+      setTimeout(() => {
+        isTyping = false;
+        document.getElementById("whatsapp-typing-indicator").style.display = "none";
+        
+        // Push bot response
+        chatMessages.push({ sender: "bot", text: CHAT_SIMULATIONS[key].bot });
+        renderWhatsAppChat();
+        
+        // Update CFO Visualizer
+        renderCFOVisualizer(key);
+      }, 1500);
+    }
+
+    // Call initial renders on load
+    window.addEventListener("DOMContentLoaded", () => {
+      renderWhatsAppChat();
+      renderCFOVisualizer("debt");
+    });
 
     let activePricingMarket = "IN";
     let activeSandboxMode = "offline";
@@ -1096,15 +1306,15 @@
       const offlineBtn = document.getElementById("sb-offline-btn");
       
       if(mode === 'online') {
-        onlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-yellow-600 text-white shadow shadow-yellow-900/30";
+        onlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-[#6366F1] text-white shadow shadow-indigo-900/30";
         offlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white";
         const badge = document.getElementById("audit-badge");
         if(badge) {
-          badge.className = "text-[10px] bg-yellow-500/20 text-yellow-400 font-bold border border-yellow-500/30 px-2.5 py-1 rounded-full animate-pulse";
-          badge.innerHTML = '<i data-lucide="zap" class="w-3 h-3 inline mr-1 text-yellow-400"></i> Cloud Gemini Active';
+          badge.className = "text-[10px] bg-indigo-500/20 text-[#818CF8] font-bold border border-indigo-500/30 px-2.5 py-1 rounded-full animate-pulse";
+          badge.innerHTML = '<i data-lucide="zap" class="w-3 h-3 inline mr-1 text-[#818CF8]"></i> Cloud Gemini Active';
         }
       } else {
-        offlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-amber-600 text-white shadow shadow-amber-900/30";
+        offlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 bg-[#6366F1] text-white shadow shadow-indigo-900/30";
         onlineBtn.className = "px-2.5 py-1 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 text-brand-textGray hover:text-white";
         const badge = document.getElementById("audit-badge");
         if(badge) {
@@ -1219,19 +1429,19 @@
       const taxAudit = document.getElementById("pricing-tax-audit");
       
       if (market === "IN") {
-        btnIn.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30";
+        btnIn.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-[#6366F1] text-white shadow shadow-indigo-900/30";
         btnUk.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-[#8B8B9E] hover:text-[#F4F4F8]";
         priceAmt.innerText = "₹799";
         descFree.innerText = "Perfect for testing local document indexing.";
         descPro.innerText = "Full vCFO Audit & Predictive Growth Suite";
-        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-amber-500"></i> GST Mismatches & 2.5% Shared Savings';
+        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> GST Mismatches & 2.5% Shared Savings';
       } else {
-        btnUk.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow shadow-amber-900/30";
+        btnUk.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-[#6366F1] text-white shadow shadow-indigo-900/30";
         btnIn.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-[#8B8B9E] hover:text-[#F4F4F8]";
         priceAmt.innerText = "£29";
         descFree.innerText = "Perfect for testing UK document indexing.";
         descPro.innerText = "Full vCFO Audit & Predictive Growth Suite";
-        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-amber-500"></i> VAT Mismatches & 2.5% Shared Savings';
+        taxAudit.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-[#818CF8]"></i> VAT Mismatches & 2.5% Shared Savings';
       }
       lucide.createIcons();
     }
@@ -1259,12 +1469,12 @@
     // Chat invite floaters
     function toggleChatWindow() {
       const win = document.getElementById("chat-window");
-      const icon = document.getElementById("chat-icon");
+      if (!win) return;
       const bubble = document.getElementById("chat-bubble");
       
       if(win.classList.contains("hidden")) {
         win.classList.remove("hidden");
-        bubble.classList.add("hidden");
+        if (bubble) bubble.classList.add("hidden");
       } else {
         win.classList.add("hidden");
       }
@@ -1272,25 +1482,26 @@
     
     function triggerPlaygroundQuestion(text) {
       const win = document.getElementById("chat-window");
-      if(win.classList.contains("hidden")) {
+      if (win && win.classList.contains("hidden")) {
         toggleChatWindow();
       }
       sendChatMessage(text);
       // Ensure the chat container remains fully visible
       const chatWin = document.getElementById("chat-window");
-      chatWin.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      if (chatWin) chatWin.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
     
     function sendChatMessage(text) {
-      if(!text.trim()) return;
+      if(!text || !text.trim()) return;
       
       const container = document.getElementById("chat-messages");
+      if (!container) return;
       
       // User message
       const userDiv = document.createElement("div");
       userDiv.className = "flex flex-col items-end mt-3";
       userDiv.innerHTML = `
-        <div class="p-3 rounded-2xl max-w-[85%] bg-amber-600/10 border border-amber-500/20 text-white rounded-tr-sm">
+        <div class="p-3 rounded-2xl max-w-[85%] bg-[#6366F1]/10 border border-[#6366F1]/20 text-white rounded-tr-sm">
           ${text}
         </div>
       `;
@@ -1337,7 +1548,7 @@
         closeLeadsModal();
       }
     });
-
+ 
     // Close modal & chat on Esc keypress
     document.addEventListener("keydown", function(e) {
       if (e.key === "Escape") {
@@ -1357,12 +1568,12 @@
       if (content.classList.contains("hidden")) {
         content.classList.remove("hidden");
         icon.style.transform = "rotate(180deg)";
-        icon.classList.add("border-amber-500/40");
+        icon.classList.add("border-[#6366F1]/40");
         icon.classList.remove("border-brand-border");
       } else {
         content.classList.add("hidden");
         icon.style.transform = "rotate(0deg)";
-        icon.classList.remove("border-amber-500/40");
+        icon.classList.remove("border-[#6366F1]/40");
         icon.classList.add("border-brand-border");
       }
       lucide.createIcons();
